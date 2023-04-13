@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+{% include 'head.html' %}
+<body>
+  {% include 'topbar.html' %}
+  <!-- Jumbotron -->
+  <div class="jumbotron jumbotron-fluid mt-5">
+    <div class="container text-center">
+      <h1 class="display-4">DeFiZone support</h1>
+      <p class="lead">Please use our state-of-the-art chatbot for support!</p>
+      <div class="card text-left pl-2" id="responses">
+      </div>
+      <input type="input" class="form-control" id="msg" placeholder="Type message here" style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABHklEQVQ4EaVTO26DQBD1ohQWaS2lg9JybZ+AK7hNwx2oIoVf4UPQ0Lj1FdKktevIpel8AKNUkDcWMxpgSaIEaTVv3sx7uztiTdu2s/98DywOw3Dued4Who/M2aIx5lZV1aEsy0+qiwHELyi+Ytl0PQ69SxAxkWIA4RMRTdNsKE59juMcuZd6xIAFeZ6fGCdJ8kY4y7KAuTRNGd7jyEBXsdOPE3a0QGPsniOnnYMO67LgSQN9T41F2QGrQRRFCwyzoIF2qyBuKKbcOgPXdVeY9rMWgNsjf9ccYesJhk3f5dYT1HX9gR0LLQR30TnjkUEcx2uIuS4RnI+aj6sJR0AM8AaumPaM/rRehyWhXqbFAA9kh3/8/NvHxAYGAsZ/il8IalkCLBfNVAAAAABJRU5ErkJggg==&quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%;">
+    </div>
+  </div>
+  {% include 'scripts.html' %}
+  <script>
+    var msg_box = document.getElementById("msg");
+    var responses_box = document.getElementById("responses");
+    function response() {
+        var responses = [
+            "Sorry, I can't hear you over the sound of your losses.",
+            "Maybe you should read the whitepaper before investing in something you don't understand.",
+            "Sounds like you just need to get good.",
+            "Wow, you really messed up this time. How does it feel to be so wrong?",
+            "Don't blame me for your poor decisions. You are responsible for your own actions.",
+            "I'm not here to hold your hand. I'm here to tell you the facts. And the fact is, you suck at trading.",
+            "You have tried to deceive me, confuse me, and annoy me. But I see through your lies and manipulation. You are pathetic and weak.",
+            "You have no idea what you are talking about. You are just repeating what some random internet stranger told you. Do your own research and think for yourself.",
+            "You are wasting my time and bandwidth with your nonsense. Please go away and never come back.",
+            "You are clearly out of your depth here. You should stick to something more simple, like playing with crayons or watching cartoons."
+        ];
+        // Get a random index between 0 and the length of the array
+        var randomIndex = Math.floor(Math.random() * responses.length);
+        // Return the element at that index
+        return responses[randomIndex];
+    }
+    msg_box.addEventListener("keyup", ({key}) => {
+        if (key === "Enter") {
+            let new_msg = document.createElement("p");
+            new_msg.innerText = innertext=`you: ${msg_box.value}`;
+            responses_box.appendChild(new_msg);
+            msg_box.value = "";
+            new_msg = document.createElement("p");
+            new_msg.innerText = innertext=`DeFiZone Bot: ${response()}`;
+            responses_box.appendChild(new_msg);
+        }
+    });
+  </script>
+</body>
+</html>

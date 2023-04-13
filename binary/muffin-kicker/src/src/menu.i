@@ -1,0 +1,1 @@
+.global run_menu

@@ -1,0 +1,23 @@
+# chal metadata
+name: gpt-encrypt
+author: Lance Roy
+description: |-
+  I needed a block cipher to encrypt my flag, but I don't trust AES, so I asked ChatGPT to write one for me.
+
+  Note: the file `gpt.py` is almost directly copied from ChatGPT output, with some minor modifications to make it a valid python script.
+
+# these are files that are given to the player. if you need things from the container (i.e. compiled binary, libc),
+# push the challenge branch and download the artifacts from the CI/CD job
+# if no files are provided, delete this block
+provide:
+- ./src/chal.py
+- ./src/gpt.py
+- ./output.txt
+
+# this should usually be the flag file so that it doesn't get out of sync if you change it
+flag:
+  file: ./flag
+
+# visible controls rCTF status, deployed controls k8s status. THESE SHOULD ALWAYS BE THE SAME
+visible: true
+deployed: true

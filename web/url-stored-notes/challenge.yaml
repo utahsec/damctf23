@@ -1,0 +1,45 @@
+# chal metadata
+name: url-stored-notes
+author: M1ll_0n # @AUTHOR: that's you!
+description: |-
+  Ever seen that neat [paste program by topaz](https://github.com/topaz/paste) for advent of code?  Yeah, well this is like 100% better and more secure since it's for note card sharing.
+
+  Admin bot at /admin
+
+  [http://url-stored-notes.chals.damctf.xyz](http://url-stored-notes.chals.damctf.xyz)
+
+  [http://64.227.26.193](http://64.227.26.193)
+
+# these are files that are given to the player. if you need things from the container (i.e. compiled binary, libc),
+# push the challenge branch and download the artifacts from the CI/CD job
+# if no files are provided, delete this block
+provide:
+- ./dist/url-notes.zip
+
+# this should usually be the flag file so that it doesn't get out of sync if you change it
+flag:
+  file: ./flag
+
+# visible controls rCTF status, deployed controls k8s status. THESE SHOULD ALWAYS BE THE SAME
+visible: true
+deployed: true
+
+# specify the containers to be built
+# replicas should be 2 unless resource intensive (>2) or stateful (1)
+# make sure to update the port for what you are exposing in the Dockerfile
+#containers:
+#  main:
+#    build: ./src
+#    resources:
+#      limits:
+#        cpu: 200m
+#    replicas: 2
+#    ports:
+#    - 8080
+  
+
+# make sure to only expose the target container (i.e. http but not mysql)
+#expose:
+#  main:
+#  - target: 8080 # this is the container's EXPOSE port
+#    http: url-stored-notes  # creates traefic ingress record based on hostname (don't change the value)

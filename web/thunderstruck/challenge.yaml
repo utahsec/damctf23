@@ -1,0 +1,40 @@
+# chal metadata
+name: thunderstruck
+author: captainGeech # @AUTHOR: that's you!
+description: |-
+  Attention all CTI analysts: Excel has some competition now! Check out our new IOC validation tool, Thunderstruck.
+
+  [http://thunderstruck.chals.damctf.xyz](http://thunderstruck.chals.damctf.xyz)
+
+  [http://157.230.188.90](http://157.230.188.90)
+
+# these are files that are given to the player. if you need things from the container (i.e. compiled binary, libc),
+# push the challenge branch and download the artifacts from the CI/CD job
+# if no files are provided, delete this block
+provide:
+- ./thunderstruck.zip
+
+# this should usually be the flag file so that it doesn't get out of sync if you change it
+flag:
+  file: ./flag
+
+# visible controls rCTF status, deployed controls k8s status. THESE SHOULD ALWAYS BE THE SAME
+visible: true
+deployed: true
+
+# specify the containers to be built
+# replicas should be 2 unless resource intensive (>2) or stateful (1)
+# make sure to update the port for what you are exposing in the Dockerfile
+#containers:
+#  main:
+#    build: .
+#    replicas: 2
+#    ports:
+#    - 31337
+
+# make sure to only expose the target container (i.e. http but not mysql)
+#expose:
+#  main:
+#  - target: 5000 # this is the container's EXPOSE port
+#    # @AUTHOR PICK ONE OF THE BELOW, NOT BOTH
+#    http: thunderstruck  # creates traefic ingress record based on hostname (don't change the value)

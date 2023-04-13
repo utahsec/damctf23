@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>No Data-Store Notes</title>
+<link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
+<link rel="stylesheet" href="style.css" />
+<script defer src="https://pyscript.net/latest/pyscript.js"></script>
+</head>
+<body id="content">
+<script id="js">
+const SUPPORTED_TAGS = ['p', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'i', 'code'];
+
+function createNoteElement(prompt, answer, tag){
+
+    const noteElement = document.createElement("div");
+    noteElement.classList.add("note");
+    const textElement = document.createElement("div");
+    textElement.classList.add("text");
+    const promptElement = document.createElement('textarea');
+    const answerElement = document.createElement('textarea');
+
+    tagElement = document.createElement('select');
+    
+    for (let i = 0; i < SUPPORTED_TAGS.length; i++) {
+         tagElement.innerHTML += `<option value="${SUPPORTED_TAGS[i]}">${SUPPORTED_TAGS[i]}</option>`;
+    }
+    
+    noteElement.append(tagElement);
+    noteElement.appendChild(textElement);
+
+    const promptLabel = document.createElement('h4');
+    promptLabel.textContent = "Prompt:";
+    textElement.appendChild(promptLabel);
+    textElement.appendChild(promptElement);
+    
+    const answerLabel = document.createElement('h4');
+    answerLabel.textContent = "Answer:";
+    textElement.appendChild(answerLabel);
+
+    textElement.appendChild(answerElement);
+
+    promptElement.textContent = prompt;
+    answerElement.textContent = answer;
+
+    document.getElementById("notes").appendChild(noteElement);
+    
+    return;
+}
+
+// Auto-reload content
+window.onload = () => {
+    const python_code = document.getElementById('python').innerHTML;
+    window.onhashchange =  () => {
+        // probably not the right way to do this but I don't care 😎
+        pyscript.runtime.run(python_code.replace('&gt;', ">"));
+    }
+
+    // share functionality
+    document.getElementById('share').addEventListener('click', () => {
+        // run the python function
+        const data = [];
+
+        // basically iterate through all html elements
+        const notes = document.getElementById("notes").children;
+        for (let i = 0; i < notes.length; i++){
+            let tag = notes[i].children[0].value;
+            let prompt = notes[i].children[1].children[1].value;
+            let answer = notes[i].children[1].children[3].value;
+            data.push({"prompt": prompt, "answer": answer, "tag": tag});
+        }
+
+        // access pyscript functions
+        let encodeNotes = pyscript.interpreter.globals.get('encodeNotes');
+        const result = encodeNotes(JSON.stringify(data)).decode();
+
+        // update DOM
+        const linkElement = document.getElementById('link');
+        linkElement.innerHTML = '';
+        const title = document.createElement('h3');
+        title.textContent = 'Generated Link:';
+        linkElement.appendChild(title);
+        const anchor = document.createElement('a');
+        const linkText = window.location.origin + '/#' + result;
+        anchor.href = linkText;
+        // anchor.target = "_blank";
+        linkElement.appendChild(anchor);
+        const pre = document.createElement('pre');
+        pre.textContent = linkText;
+        anchor.appendChild(pre);
+    })
+
+    document.getElementById('add').addEventListener('click', () => {
+        createNoteElement("", "", "");
+    })
+}
+
+
+
+</script>
+<div id="notes"></div>
+<button id="add">Add empty note</button>
+<button id="share">Shares Notes</button>
+
+<div id="link">
+</div>
+<py-config>
+packages = ["lzma"]
+</py-config>
+<py-script id="python">
+import js
+from base64 import b64encode, b64decode
+from lzma import compress, decompress
+import json
+from pyscript import Element
+
+def encodeNotes(json_str):
+    return b64encode(compress(json_str.encode()))
+
+
+
+encodedNotes = js.window.location.hash[1:]
+notes = {}
+try:
+    encoded_notes = encodedNotes.encode()
+    decoded_notes = decompress(b64decode(encoded_notes))
+    notes = json.loads(decoded_notes.decode('utf-8'))
+except:
+    notes = {}
+
+# Dynamically load content
+js.document.getElementById('notes').innerHTML=''
+for note in notes:
+    if 'prompt' in note and 'answer' in note and "tag" in note:
+        js.createNoteElement(note['prompt'], note['answer'], note['tag'])
+
+</py-script>
+</body>
+</html>

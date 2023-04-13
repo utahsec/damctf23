@@ -1,0 +1,1461 @@
+warning: unused import: `alloc::vec::Vec`
+ --> /Users/jonathan/code/ctf/dam/muffinkicker/potatis/nes/src/frame.rs:1:5
+  |
+1 | use alloc::vec::Vec;
+  |     ^^^^^^^^^^^^^^^
+  |
+  = note: `#[warn(unused_imports)]` on by default
+
+warning: unused variable: `x`
+  --> /Users/jonathan/code/ctf/dam/muffinkicker/potatis/nes/src/frame.rs:87:34
+   |
+87 |   pub fn set_pixel_xy(&mut self, x: usize, y: usize, rgb: (u8, u8, u8)) {    
+   |                                  ^ help: if this is intentional, prefix it with an underscore: `_x`
+   |
+   = note: `#[warn(unused_variables)]` on by default
+
+warning: unused variable: `y`
+  --> /Users/jonathan/code/ctf/dam/muffinkicker/potatis/nes/src/frame.rs:87:44
+   |
+87 |   pub fn set_pixel_xy(&mut self, x: usize, y: usize, rgb: (u8, u8, u8)) {    
+   |                                            ^ help: if this is intentional, prefix it with an underscore: `_y`
+
+warning: unused variable: `rgb`
+  --> /Users/jonathan/code/ctf/dam/muffinkicker/potatis/nes/src/frame.rs:87:54
+   |
+87 |   pub fn set_pixel_xy(&mut self, x: usize, y: usize, rgb: (u8, u8, u8)) {    
+   |                                                      ^^^ help: if this is intentional, prefix it with an underscore: `_rgb`
+
+warning: unused variable: `buf`
+  --> /Users/jonathan/code/ctf/dam/muffinkicker/potatis/nes/src/frame.rs:91:33
+   |
+91 |   pub fn replace_buf(&mut self, buf: &[u8]) {
+   |                                 ^^^ help: if this is intentional, prefix it with an underscore: `_buf`
+
+warning: type alias `SetPixelFn` is never used
+ --> /Users/jonathan/code/ctf/dam/muffinkicker/potatis/nes/src/frame.rs:3:6
+  |
+3 | type SetPixelFn = fn(&mut [u8], i: usize, rgb: (u8, u8, u8));
+  |      ^^^^^^^^^^
+  |
+  = note: `#[warn(dead_code)]` on by default
+
+warning: constant `NTSC_OVERSCAN_PIXELS` is never used
+  --> /Users/jonathan/code/ctf/dam/muffinkicker/potatis/nes/src/frame.rs:53:7
+   |
+53 | const NTSC_OVERSCAN_PIXELS: usize = 8;
+   |       ^^^^^^^^^^^^^^^^^^^^
+
+warning: `nes` (lib) generated 7 warnings (run `cargo fix --lib -p nes` to apply 5 suggestions)
+warning: unused import: `ServerMode`
+ --> src/server/server.rs:2:47
+  |
+2 | use libcloud::{resources::{Resources, StrId}, ServerMode};
+  |                                               ^^^^^^^^^^
+  |
+  = note: `#[warn(unused_imports)]` on by default
+
+warning: `nes-cloud` (bin "nes-cloud-app") generated 1 warning (run `cargo fix --bin "nes-cloud-app"` to apply 1 suggestion)
+    Finished release [optimized] target(s) in 0.04s
+     Running `target/release/nes-cloud-app`
+[2023-04-04 17:03:49.851003 -07:00] INFO [src/server/server.rs:52] [fd: N/A] "./included-roms/muffin_kicker.nes" listening on 0.0.0.0:4444
+[2023-04-04 17:03:49.851110 -07:00] INFO [src/server/server.rs:52] [fd: N/A] "./included-roms/interrupting_muffin_kicker.nes" listening on 0.0.0.0:5555
+[2023-04-04 17:03:49.851142 -07:00] INFO [src/server/runners/process.rs:20] [fd: N/A] Using binary: "target/release/nes-cloud-instance"
+[2023-04-04 17:03:50.888357 -07:00] INFO [src/server/server.rs:94] [fd: N/A] Client soft-connect: ClientId(127.0.0.1:56114) (0 connected)
+[2023-04-04 17:03:50.889282 -07:00] INFO [src/server/runners/process.rs:44] [fd: N/A] Spawned instance for fd: 5, pid: 82551
+[2023-04-04 17:03:50.889352 -07:00] INFO [src/server/server.rs:114] [fd: N/A] Client connected! ClientId(127.0.0.1:56114)
+[2023-04-04 17:03:50.894971 -07:00] INFO [src/instance/main.rs:109] [fd: 5] Instance started. FD: Ok("5"), ROM: "./included-roms/interrupting_muffin_kicker.nes"
+[[38;5;27m2023-04-04 17:03:50.895334 -07:00[0m] [38;5;27mDEBUG[0m [src/shared/resources.rs:50] [38;5;27m[fd: 5][0m [38;5;27mLoading included ROM: "./included-roms/interrupting_muffin_kicker.nes"[0m
+[2023-04-04 17:03:51.923720 -07:00] INFO [src/instance/main.rs:64] [fd: 5] Starting recv thread.
+[2023-04-04 17:03:51.923964 -07:00] INFO [src/instance/main.rs:83] [fd: 5] Starting emulation. FPS: 30, limit: 2000
+[[38;5;27m2023-04-04 17:03:52.649936 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: 
+ (0x0a)[0m
+[[38;5;208m2023-04-04 17:04:02.780949 -07:00[0m] [38;5;208mWARN[0m [src/instance/main.rs:72] [38;5;208m[fd: 5][0m [38;5;208mRecv thread died[0m
+[[38;5;208m2023-04-04 17:04:02.830674 -07:00[0m] [38;5;208mWARN[0m [src/instance/main.rs:93] [38;5;208m[fd: 5][0m [38;5;208mNES powered off[0m
+[2023-04-04 17:04:02.830786 -07:00] INFO [src/instance/main.rs:149] [fd: 5] Instance died.
+[2023-04-04 17:04:02.831149 -07:00] INFO [src/server/runners/process.rs:48] [fd: N/A] Instance 5 exited with status Ok(ExitStatus(unix_wait_status(0)))
+[[38;5;196m2023-04-04 17:04:02.831283 -07:00[0m] [38;5;196mERROR[0m [src/server/server.rs:90] [38;5;196m[fd: N/A][0m [38;5;196mClient disconnected: ClientId(127.0.0.1:56114) (0 connected)[0m
+[2023-04-04 17:04:03.101011 -07:00] INFO [src/server/server.rs:94] [fd: N/A] Client soft-connect: ClientId(127.0.0.1:56116) (0 connected)
+[2023-04-04 17:04:03.101594 -07:00] INFO [src/server/runners/process.rs:44] [fd: N/A] Spawned instance for fd: 5, pid: 82601
+[2023-04-04 17:04:03.101651 -07:00] INFO [src/server/server.rs:114] [fd: N/A] Client connected! ClientId(127.0.0.1:56116)
+[2023-04-04 17:04:03.104638 -07:00] INFO [src/instance/main.rs:109] [fd: 5] Instance started. FD: Ok("5"), ROM: "./included-roms/interrupting_muffin_kicker.nes"
+[[38;5;27m2023-04-04 17:04:03.104893 -07:00[0m] [38;5;27mDEBUG[0m [src/shared/resources.rs:50] [38;5;27m[fd: 5][0m [38;5;27mLoading included ROM: "./included-roms/interrupting_muffin_kicker.nes"[0m
+[2023-04-04 17:04:03.908081 -07:00] INFO [src/instance/main.rs:64] [fd: 5] Starting recv thread.
+[2023-04-04 17:04:03.908858 -07:00] INFO [src/instance/main.rs:83] [fd: 5] Starting emulation. FPS: 30, limit: 2000
+[[38;5;27m2023-04-04 17:04:04.433595 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: 
+ (0x0a)[0m
+[[38;5;208m2023-04-04 17:04:16.925169 -07:00[0m] [38;5;208mWARN[0m [src/instance/main.rs:72] [38;5;208m[fd: 5][0m [38;5;208mRecv thread died[0m
+[[38;5;208m2023-04-04 17:04:16.981540 -07:00[0m] [38;5;208mWARN[0m [src/instance/main.rs:93] [38;5;208m[fd: 5][0m [38;5;208mNES powered off[0m
+[2023-04-04 17:04:16.981656 -07:00] INFO [src/instance/main.rs:149] [fd: 5] Instance died.
+[2023-04-04 17:04:16.981958 -07:00] INFO [src/server/runners/process.rs:48] [fd: N/A] Instance 5 exited with status Ok(ExitStatus(unix_wait_status(0)))
+[[38;5;196m2023-04-04 17:04:16.982059 -07:00[0m] [38;5;196mERROR[0m [src/server/server.rs:90] [38;5;196m[fd: N/A][0m [38;5;196mClient disconnected: ClientId(127.0.0.1:56116) (0 connected)[0m
+[2023-04-04 17:04:17.402869 -07:00] INFO [src/server/server.rs:94] [fd: N/A] Client soft-connect: ClientId(127.0.0.1:56118) (0 connected)
+[2023-04-04 17:04:17.403207 -07:00] INFO [src/server/runners/process.rs:44] [fd: N/A] Spawned instance for fd: 5, pid: 82626
+[2023-04-04 17:04:17.403251 -07:00] INFO [src/server/server.rs:114] [fd: N/A] Client connected! ClientId(127.0.0.1:56118)
+[2023-04-04 17:04:17.405559 -07:00] INFO [src/instance/main.rs:109] [fd: 5] Instance started. FD: Ok("5"), ROM: "./included-roms/interrupting_muffin_kicker.nes"
+[[38;5;27m2023-04-04 17:04:17.405715 -07:00[0m] [38;5;27mDEBUG[0m [src/shared/resources.rs:50] [38;5;27m[fd: 5][0m [38;5;27mLoading included ROM: "./included-roms/interrupting_muffin_kicker.nes"[0m
+Error: Error { kind: UnexpectedEof, message: "failed to fill whole buffer" }
+[2023-04-04 17:04:18.299832 -07:00] INFO [src/server/runners/process.rs:48] [fd: N/A] Instance 5 exited with status Ok(ExitStatus(unix_wait_status(256)))
+[[38;5;196m2023-04-04 17:04:18.300074 -07:00[0m] [38;5;196mERROR[0m [src/server/server.rs:90] [38;5;196m[fd: N/A][0m [38;5;196mClient disconnected: ClientId(127.0.0.1:56118) (0 connected)[0m
+[2023-04-04 17:04:25.337955 -07:00] INFO [src/server/server.rs:94] [fd: N/A] Client soft-connect: ClientId(127.0.0.1:56120) (0 connected)
+[2023-04-04 17:04:25.338248 -07:00] INFO [src/server/runners/process.rs:44] [fd: N/A] Spawned instance for fd: 5, pid: 82641
+[2023-04-04 17:04:25.338272 -07:00] INFO [src/server/server.rs:114] [fd: N/A] Client connected! ClientId(127.0.0.1:56120)
+[2023-04-04 17:04:25.340048 -07:00] INFO [src/instance/main.rs:109] [fd: 5] Instance started. FD: Ok("5"), ROM: "./included-roms/interrupting_muffin_kicker.nes"
+[[38;5;27m2023-04-04 17:04:25.340162 -07:00[0m] [38;5;27mDEBUG[0m [src/shared/resources.rs:50] [38;5;27m[fd: 5][0m [38;5;27mLoading included ROM: "./included-roms/interrupting_muffin_kicker.nes"[0m
+[2023-04-04 17:04:25.340228 -07:00] INFO [src/instance/main.rs:83] [fd: 5] Starting emulation. FPS: 30, limit: 2000
+[2023-04-04 17:04:25.340263 -07:00] INFO [src/instance/main.rs:64] [fd: 5] Starting recv thread.
+[[38;5;27m2023-04-04 17:04:25.340317 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: b (0x62)[0m
+[[38;5;27m2023-04-04 17:04:25.340329 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: b (0x62)[0m
+[[38;5;27m2023-04-04 17:04:25.340335 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: b (0x62)[0m
+[[38;5;27m2023-04-04 17:04:25.340340 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: b (0x62)[0m
+[[38;5;27m2023-04-04 17:04:25.340345 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: b (0x62)[0m
+[[38;5;27m2023-04-04 17:04:25.340350 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: b (0x62)[0m
+[[38;5;27m2023-04-04 17:04:25.340354 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: b (0x62)[0m
+[[38;5;27m2023-04-04 17:04:25.340358 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: b (0x62)[0m
+[[38;5;27m2023-04-04 17:04:25.340368 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: b (0x62)[0m
+[[38;5;27m2023-04-04 17:04:25.340372 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: s (0x73)[0m
+[[38;5;27m2023-04-04 17:04:25.340376 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: n (0x6e)[0m
+[[38;5;27m2023-04-04 17:04:25.340380 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: b (0x62)[0m
+[[38;5;27m2023-04-04 17:04:25.340385 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: b (0x62)[0m
+[[38;5;27m2023-04-04 17:04:25.340389 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: b (0x62)[0m
+[[38;5;27m2023-04-04 17:04:25.340393 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: b (0x62)[0m
+[[38;5;27m2023-04-04 17:04:25.340397 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: b (0x62)[0m
+[[38;5;27m2023-04-04 17:04:25.340401 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: b (0x62)[0m
+[[38;5;27m2023-04-04 17:04:25.340405 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: b (0x62)[0m
+[[38;5;27m2023-04-04 17:04:25.340410 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: b (0x62)[0m
+[[38;5;27m2023-04-04 17:04:25.340414 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: b (0x62)[0m
+[[38;5;27m2023-04-04 17:04:25.340418 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: b (0x62)[0m
+[[38;5;27m2023-04-04 17:04:25.340423 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:04:25.340427 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:04:25.340440 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:04:25.340444 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: w (0x77)[0m
+[[38;5;27m2023-04-04 17:04:25.340448 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: w (0x77)[0m
+[[38;5;27m2023-04-04 17:04:25.340452 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: 
+ (0x0a)[0m
+[[38;5;27m2023-04-04 17:04:25.340456 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:04:25.340461 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: 
+ (0x0a)[0m
+[[38;5;27m2023-04-04 17:04:25.340465 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: w (0x77)[0m
+[[38;5;27m2023-04-04 17:04:25.340469 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: w (0x77)[0m
+[[38;5;27m2023-04-04 17:04:25.340473 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:04:25.340479 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: 
+ (0x0a)[0m
+[[38;5;27m2023-04-04 17:04:25.340483 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: w (0x77)[0m
+[[38;5;27m2023-04-04 17:04:25.340488 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:04:25.340492 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:04:25.340496 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:04:25.340500 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:04:25.340505 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:04:25.340509 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:04:25.340513 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: 
+ (0x0a)[0m
+[[38;5;27m2023-04-04 17:04:25.340518 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: w (0x77)[0m
+[[38;5;27m2023-04-04 17:04:25.340522 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: w (0x77)[0m
+[[38;5;27m2023-04-04 17:04:25.340527 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: w (0x77)[0m
+[[38;5;27m2023-04-04 17:04:25.340531 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:04:25.340536 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: 
+ (0x0a)[0m
+[[38;5;27m2023-04-04 17:04:25.340540 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:04:25.340544 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:04:25.340549 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:04:25.340553 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: w (0x77)[0m
+[[38;5;27m2023-04-04 17:04:25.340563 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: 
+ (0x0a)[0m
+[[38;5;27m2023-04-04 17:04:25.340567 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:04:25.340571 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:04:25.340575 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:04:25.340579 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:04:25.340583 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:04:25.340587 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:04:25.340591 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: w (0x77)[0m
+[[38;5;27m2023-04-04 17:04:25.340595 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: w (0x77)[0m
+[[38;5;27m2023-04-04 17:04:25.340614 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: w (0x77)[0m
+[[38;5;27m2023-04-04 17:04:25.340631 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: 
+ (0x0a)[0m
+[[38;5;27m2023-04-04 17:04:25.340637 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:04:25.340646 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:04:25.340652 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:04:25.340656 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:04:25.340660 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: w (0x77)[0m
+[[38;5;27m2023-04-04 17:04:25.340665 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: w (0x77)[0m
+[[38;5;27m2023-04-04 17:04:25.340669 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: 
+ (0x0a)[0m
+[[38;5;27m2023-04-04 17:04:25.340674 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: s (0x73)[0m
+[[38;5;27m2023-04-04 17:04:25.340682 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: s (0x73)[0m
+[[38;5;27m2023-04-04 17:04:25.340686 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:04:25.340691 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:04:25.340695 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: 
+ (0x0a)[0m
+[[38;5;27m2023-04-04 17:04:25.340699 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: s (0x73)[0m
+[[38;5;27m2023-04-04 17:04:25.340704 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:04:25.340708 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: 
+ (0x0a)[0m
+[[38;5;27m2023-04-04 17:04:25.340713 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: w (0x77)[0m
+[[38;5;27m2023-04-04 17:04:25.340723 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: w (0x77)[0m
+[[38;5;27m2023-04-04 17:04:25.340727 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: w (0x77)[0m
+[[38;5;27m2023-04-04 17:04:25.340731 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:04:25.340739 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:04:25.340743 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: 
+ (0x0a)[0m
+[[38;5;27m2023-04-04 17:04:25.340747 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:04:25.340751 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:04:25.340755 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:04:25.340759 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:04:25.340763 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: 
+ (0x0a)[0m
+[[38;5;27m2023-04-04 17:04:25.340767 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:04:25.340771 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: w (0x77)[0m
+[[38;5;27m2023-04-04 17:04:25.340775 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: s (0x73)[0m
+[[38;5;27m2023-04-04 17:04:25.340779 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: s (0x73)[0m
+[[38;5;27m2023-04-04 17:04:25.340784 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: s (0x73)[0m
+[[38;5;27m2023-04-04 17:04:25.340788 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: 
+ (0x0a)[0m
+[[38;5;27m2023-04-04 17:04:25.340792 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: s (0x73)[0m
+[[38;5;27m2023-04-04 17:04:25.340796 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:04:25.340800 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:04:25.340804 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:04:25.340808 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:04:25.340812 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: s (0x73)[0m
+[[38;5;27m2023-04-04 17:04:25.340816 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: 
+ (0x0a)[0m
+[[38;5;27m2023-04-04 17:04:25.340820 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:04:25.340824 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:04:25.340829 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:04:25.340833 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: 
+ (0x0a)[0m
+[[38;5;27m2023-04-04 17:04:25.340841 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:04:25.340845 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:04:25.340849 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: 
+ (0x0a)[0m
+[[38;5;27m2023-04-04 17:04:25.340853 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:04:25.340858 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:04:25.340862 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:04:25.340866 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:04:25.340870 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: 
+ (0x0a)[0m
+[[38;5;27m2023-04-04 17:04:25.340874 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: b (0x62)[0m
+[[38;5;27m2023-04-04 17:04:25.340878 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: w (0x77)[0m
+[[38;5;27m2023-04-04 17:04:25.340882 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: w (0x77)[0m
+[[38;5;27m2023-04-04 17:04:25.340887 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: w (0x77)[0m
+[[38;5;27m2023-04-04 17:04:25.340891 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: w (0x77)[0m
+[[38;5;27m2023-04-04 17:04:25.340895 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:04:25.340899 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: s (0x73)[0m
+[[38;5;27m2023-04-04 17:04:25.340903 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input:   (0x20)[0m
+[[38;5;27m2023-04-04 17:04:25.340907 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: 
+ (0x0a)[0m
+[[38;5;27m2023-04-04 17:04:25.340911 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: w (0x77)[0m
+[[38;5;27m2023-04-04 17:04:25.340915 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: w (0x77)[0m
+[[38;5;27m2023-04-04 17:04:25.340919 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:04:25.340924 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:04:25.340928 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:04:25.340932 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:04:25.340936 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: s (0x73)[0m
+[[38;5;27m2023-04-04 17:04:25.340941 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: 
+ (0x0a)[0m
+[[38;5;27m2023-04-04 17:04:25.340945 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:04:25.340949 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:04:25.340957 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:04:25.340961 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:04:25.340965 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:04:25.340970 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: s (0x73)[0m
+[[38;5;27m2023-04-04 17:04:25.340974 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: s (0x73)[0m
+[[38;5;27m2023-04-04 17:04:25.340979 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: 
+ (0x0a)[0m
+[[38;5;27m2023-04-04 17:04:25.340983 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:04:25.340987 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: w (0x77)[0m
+[[38;5;27m2023-04-04 17:04:25.340991 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: w (0x77)[0m
+[[38;5;27m2023-04-04 17:04:25.340995 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:04:25.340999 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: 
+ (0x0a)[0m
+[[38;5;27m2023-04-04 17:04:25.341003 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:04:25.341007 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:04:25.341011 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:04:25.341016 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:04:25.341022 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:04:25.341026 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:04:25.341030 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:04:25.341035 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: s (0x73)[0m
+[[38;5;27m2023-04-04 17:04:25.341039 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: 
+ (0x0a)[0m
+[[38;5;27m2023-04-04 17:04:25.341043 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:04:25.341047 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:04:25.341051 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:04:25.341101 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:04:25.341182 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: w (0x77)[0m
+[[38;5;27m2023-04-04 17:04:25.341192 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: 
+ (0x0a)[0m
+[[38;5;208m2023-04-04 17:04:25.341198 -07:00[0m] [38;5;208mWARN[0m [src/instance/main.rs:72] [38;5;208m[fd: 5][0m [38;5;208mRecv thread died[0m
+[[38;5;208m2023-04-04 17:04:34.299344 -07:00[0m] [38;5;208mWARN[0m [src/instance/main.rs:93] [38;5;208m[fd: 5][0m [38;5;208mNES powered off[0m
+[2023-04-04 17:04:34.299474 -07:00] INFO [src/instance/main.rs:149] [fd: 5] Instance died.
+[2023-04-04 17:04:34.299942 -07:00] INFO [src/server/runners/process.rs:48] [fd: N/A] Instance 5 exited with status Ok(ExitStatus(unix_wait_status(0)))
+[[38;5;196m2023-04-04 17:04:34.300062 -07:00[0m] [38;5;196mERROR[0m [src/server/server.rs:90] [38;5;196m[fd: N/A][0m [38;5;196mClient disconnected: ClientId(127.0.0.1:56120) (0 connected)[0m
+[2023-04-04 17:04:40.115284 -07:00] INFO [src/server/server.rs:94] [fd: N/A] Client soft-connect: ClientId(127.0.0.1:56124) (0 connected)
+[2023-04-04 17:04:40.116105 -07:00] INFO [src/server/runners/process.rs:44] [fd: N/A] Spawned instance for fd: 5, pid: 82665
+[2023-04-04 17:04:40.116152 -07:00] INFO [src/server/server.rs:114] [fd: N/A] Client connected! ClientId(127.0.0.1:56124)
+[2023-04-04 17:04:40.119203 -07:00] INFO [src/instance/main.rs:109] [fd: 5] Instance started. FD: Ok("5"), ROM: "./included-roms/interrupting_muffin_kicker.nes"
+[[38;5;27m2023-04-04 17:04:40.119404 -07:00[0m] [38;5;27mDEBUG[0m [src/shared/resources.rs:50] [38;5;27m[fd: 5][0m [38;5;27mLoading included ROM: "./included-roms/interrupting_muffin_kicker.nes"[0m
+[2023-04-04 17:04:40.119538 -07:00] INFO [src/instance/main.rs:83] [fd: 5] Starting emulation. FPS: 30, limit: 2000
+[2023-04-04 17:04:40.119644 -07:00] INFO [src/instance/main.rs:64] [fd: 5] Starting recv thread.
+[[38;5;27m2023-04-04 17:04:40.119772 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: b (0x62)[0m
+[[38;5;27m2023-04-04 17:04:40.119797 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: b (0x62)[0m
+[[38;5;27m2023-04-04 17:04:40.119808 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: b (0x62)[0m
+[[38;5;27m2023-04-04 17:04:40.119818 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: b (0x62)[0m
+[[38;5;27m2023-04-04 17:04:40.119829 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: b (0x62)[0m
+[[38;5;27m2023-04-04 17:04:40.119838 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: b (0x62)[0m
+[[38;5;27m2023-04-04 17:04:40.119848 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: b (0x62)[0m
+[[38;5;27m2023-04-04 17:04:40.119857 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: b (0x62)[0m
+[[38;5;27m2023-04-04 17:04:40.119866 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: b (0x62)[0m
+[[38;5;27m2023-04-04 17:04:40.119876 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: s (0x73)[0m
+[[38;5;27m2023-04-04 17:04:40.119885 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: n (0x6e)[0m
+[[38;5;27m2023-04-04 17:04:40.119894 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: b (0x62)[0m
+[[38;5;27m2023-04-04 17:04:40.119903 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: b (0x62)[0m
+[[38;5;27m2023-04-04 17:04:40.119914 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: b (0x62)[0m
+[[38;5;27m2023-04-04 17:04:40.119922 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: b (0x62)[0m
+[[38;5;27m2023-04-04 17:04:40.119931 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: b (0x62)[0m
+[[38;5;27m2023-04-04 17:04:40.119940 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: b (0x62)[0m
+[[38;5;27m2023-04-04 17:04:40.119962 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: b (0x62)[0m
+[[38;5;27m2023-04-04 17:04:40.119970 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: b (0x62)[0m
+[[38;5;27m2023-04-04 17:04:40.119977 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: b (0x62)[0m
+[[38;5;27m2023-04-04 17:04:40.119985 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: b (0x62)[0m
+[[38;5;27m2023-04-04 17:04:40.119992 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:04:40.119998 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:04:40.120005 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:04:40.120012 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: w (0x77)[0m
+[[38;5;27m2023-04-04 17:04:40.120019 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: w (0x77)[0m
+[[38;5;27m2023-04-04 17:04:40.120026 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: 
+ (0x0a)[0m
+[[38;5;27m2023-04-04 17:04:40.120033 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:04:40.120040 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: 
+ (0x0a)[0m
+[[38;5;27m2023-04-04 17:04:40.120047 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: w (0x77)[0m
+[[38;5;27m2023-04-04 17:04:40.120054 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: w (0x77)[0m
+[[38;5;27m2023-04-04 17:04:40.120061 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:04:40.120067 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: 
+ (0x0a)[0m
+[[38;5;27m2023-04-04 17:04:40.120074 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: w (0x77)[0m
+[[38;5;27m2023-04-04 17:04:40.120081 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:04:40.120088 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:04:40.120095 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:04:40.120101 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:04:40.120108 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:04:40.120114 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:04:40.120121 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: 
+ (0x0a)[0m
+[[38;5;27m2023-04-04 17:04:40.120128 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: w (0x77)[0m
+[[38;5;27m2023-04-04 17:04:40.120135 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: w (0x77)[0m
+[[38;5;27m2023-04-04 17:04:40.120142 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: w (0x77)[0m
+[[38;5;27m2023-04-04 17:04:40.120156 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:04:40.120163 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: 
+ (0x0a)[0m
+[[38;5;27m2023-04-04 17:04:40.120170 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:04:40.120177 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:04:40.120183 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:04:40.120190 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: w (0x77)[0m
+[[38;5;27m2023-04-04 17:04:40.120197 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: 
+ (0x0a)[0m
+[[38;5;27m2023-04-04 17:04:40.120204 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:04:40.120211 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:04:40.120218 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:04:40.120224 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:04:40.120231 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:04:40.120240 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:04:40.120248 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: w (0x77)[0m
+[[38;5;27m2023-04-04 17:04:40.120254 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: w (0x77)[0m
+[[38;5;27m2023-04-04 17:04:40.120261 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: w (0x77)[0m
+[[38;5;27m2023-04-04 17:04:40.120268 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: 
+ (0x0a)[0m
+[[38;5;27m2023-04-04 17:04:40.120275 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:04:40.120282 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:04:40.120290 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:04:40.120296 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:04:40.120304 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: w (0x77)[0m
+[[38;5;27m2023-04-04 17:04:40.120310 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: w (0x77)[0m
+[[38;5;27m2023-04-04 17:04:40.120318 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: 
+ (0x0a)[0m
+[[38;5;27m2023-04-04 17:04:40.120325 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: s (0x73)[0m
+[[38;5;27m2023-04-04 17:04:40.120332 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: s (0x73)[0m
+[[38;5;27m2023-04-04 17:04:40.120345 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:04:40.120352 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:04:40.120359 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: 
+ (0x0a)[0m
+[[38;5;27m2023-04-04 17:04:40.120365 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: s (0x73)[0m
+[[38;5;27m2023-04-04 17:04:40.120372 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:04:40.120379 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: 
+ (0x0a)[0m
+[[38;5;27m2023-04-04 17:04:40.120386 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: w (0x77)[0m
+[[38;5;27m2023-04-04 17:04:40.120393 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: w (0x77)[0m
+[[38;5;27m2023-04-04 17:04:40.120400 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: w (0x77)[0m
+[[38;5;27m2023-04-04 17:04:40.120407 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:04:40.120414 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:04:40.120421 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: 
+ (0x0a)[0m
+[[38;5;27m2023-04-04 17:04:40.120427 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:04:40.120434 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:04:40.120441 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:04:40.120448 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:04:40.120456 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: 
+ (0x0a)[0m
+[[38;5;27m2023-04-04 17:04:40.120463 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:04:40.120469 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: w (0x77)[0m
+[[38;5;27m2023-04-04 17:04:40.120476 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: s (0x73)[0m
+[[38;5;27m2023-04-04 17:04:40.120484 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: s (0x73)[0m
+[[38;5;27m2023-04-04 17:04:40.120491 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: s (0x73)[0m
+[[38;5;27m2023-04-04 17:04:40.120498 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: 
+ (0x0a)[0m
+[[38;5;27m2023-04-04 17:04:40.120505 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: s (0x73)[0m
+[[38;5;27m2023-04-04 17:04:40.120512 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:04:40.120519 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:04:40.120526 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:04:40.120541 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:04:40.120549 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: s (0x73)[0m
+[[38;5;27m2023-04-04 17:04:40.120558 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: 
+ (0x0a)[0m
+[[38;5;27m2023-04-04 17:04:40.120566 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:04:40.120573 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:04:40.120580 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:04:40.120586 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: 
+ (0x0a)[0m
+[[38;5;27m2023-04-04 17:04:40.120593 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:04:40.120600 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:04:40.120619 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: 
+ (0x0a)[0m
+[[38;5;27m2023-04-04 17:04:40.120655 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:04:40.120665 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:04:40.120674 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:04:40.120682 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:04:40.120689 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: 
+ (0x0a)[0m
+[[38;5;27m2023-04-04 17:04:40.120697 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: b (0x62)[0m
+[[38;5;27m2023-04-04 17:04:40.120704 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: w (0x77)[0m
+[[38;5;27m2023-04-04 17:04:40.120713 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: w (0x77)[0m
+[[38;5;27m2023-04-04 17:04:40.120720 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: w (0x77)[0m
+[[38;5;27m2023-04-04 17:04:40.120727 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: w (0x77)[0m
+[[38;5;27m2023-04-04 17:04:40.120734 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:04:40.120742 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: s (0x73)[0m
+[[38;5;27m2023-04-04 17:04:40.120749 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input:   (0x20)[0m
+[[38;5;27m2023-04-04 17:04:40.120756 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: 
+ (0x0a)[0m
+[[38;5;27m2023-04-04 17:04:40.120763 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: w (0x77)[0m
+[[38;5;27m2023-04-04 17:04:40.120770 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: w (0x77)[0m
+[[38;5;27m2023-04-04 17:04:40.120777 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:04:40.120802 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:04:40.120810 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:04:40.120819 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:04:40.120826 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: s (0x73)[0m
+[[38;5;27m2023-04-04 17:04:40.120833 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: 
+ (0x0a)[0m
+[[38;5;27m2023-04-04 17:04:40.120841 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:04:40.120848 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:04:40.120855 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:04:40.120863 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:04:40.120872 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:04:40.120879 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: s (0x73)[0m
+[[38;5;27m2023-04-04 17:04:40.120886 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: s (0x73)[0m
+[[38;5;27m2023-04-04 17:04:40.120893 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: 
+ (0x0a)[0m
+[[38;5;27m2023-04-04 17:04:40.120900 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:04:40.120907 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: w (0x77)[0m
+[[38;5;27m2023-04-04 17:04:40.120914 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: w (0x77)[0m
+[[38;5;27m2023-04-04 17:04:40.120920 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:04:40.120927 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: 
+ (0x0a)[0m
+[[38;5;27m2023-04-04 17:04:40.120934 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:04:40.120941 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:04:40.120947 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:04:40.120954 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:04:40.120961 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:04:40.120967 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:04:40.120974 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:04:40.120983 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: s (0x73)[0m
+[[38;5;27m2023-04-04 17:04:40.120990 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: 
+ (0x0a)[0m
+[[38;5;27m2023-04-04 17:04:40.121004 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:04:40.121011 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:04:40.121017 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:04:40.121024 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:04:40.121031 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: w (0x77)[0m
+[[38;5;27m2023-04-04 17:04:40.121039 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: 
+ (0x0a)[0m
+[[38;5;208m2023-04-04 17:04:53.291100 -07:00[0m] [38;5;208mWARN[0m [src/instance/main.rs:72] [38;5;208m[fd: 5][0m [38;5;208mRecv thread died[0m
+[[38;5;208m2023-04-04 17:04:53.319310 -07:00[0m] [38;5;208mWARN[0m [src/instance/main.rs:93] [38;5;208m[fd: 5][0m [38;5;208mNES powered off[0m
+[2023-04-04 17:04:53.319396 -07:00] INFO [src/instance/main.rs:149] [fd: 5] Instance died.
+[2023-04-04 17:04:53.319716 -07:00] INFO [src/server/runners/process.rs:48] [fd: N/A] Instance 5 exited with status Ok(ExitStatus(unix_wait_status(0)))
+[[38;5;196m2023-04-04 17:04:53.319800 -07:00[0m] [38;5;196mERROR[0m [src/server/server.rs:90] [38;5;196m[fd: N/A][0m [38;5;196mClient disconnected: ClientId(127.0.0.1:56124) (0 connected)[0m
+[2023-04-04 17:06:22.578328 -07:00] INFO [src/server/server.rs:94] [fd: N/A] Client soft-connect: ClientId(127.0.0.1:56232) (0 connected)
+[2023-04-04 17:06:22.579622 -07:00] INFO [src/server/runners/process.rs:44] [fd: N/A] Spawned instance for fd: 5, pid: 82790
+[2023-04-04 17:06:22.579674 -07:00] INFO [src/server/server.rs:114] [fd: N/A] Client connected! ClientId(127.0.0.1:56232)
+[2023-04-04 17:06:22.586921 -07:00] INFO [src/instance/main.rs:109] [fd: 5] Instance started. FD: Ok("5"), ROM: "./included-roms/interrupting_muffin_kicker.nes"
+[[38;5;27m2023-04-04 17:06:22.587590 -07:00[0m] [38;5;27mDEBUG[0m [src/shared/resources.rs:50] [38;5;27m[fd: 5][0m [38;5;27mLoading included ROM: "./included-roms/interrupting_muffin_kicker.nes"[0m
+[2023-04-04 17:06:22.587897 -07:00] INFO [src/instance/main.rs:64] [fd: 5] Starting recv thread.
+[[38;5;27m2023-04-04 17:06:22.588011 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: b (0x62)[0m
+[[38;5;27m2023-04-04 17:06:22.588028 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: b (0x62)[0m
+[[38;5;27m2023-04-04 17:06:22.588041 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: b (0x62)[0m
+[[38;5;27m2023-04-04 17:06:22.588052 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: b (0x62)[0m
+[[38;5;27m2023-04-04 17:06:22.588065 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: b (0x62)[0m
+[[38;5;27m2023-04-04 17:06:22.588076 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: b (0x62)[0m
+[[38;5;27m2023-04-04 17:06:22.588088 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: b (0x62)[0m
+[[38;5;27m2023-04-04 17:06:22.588098 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: b (0x62)[0m
+[[38;5;27m2023-04-04 17:06:22.588109 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: b (0x62)[0m
+[[38;5;27m2023-04-04 17:06:22.588119 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: s (0x73)[0m
+[[38;5;27m2023-04-04 17:06:22.588132 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: n (0x6e)[0m
+[[38;5;27m2023-04-04 17:06:22.588154 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: b (0x62)[0m
+[[38;5;27m2023-04-04 17:06:22.588164 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: b (0x62)[0m
+[[38;5;27m2023-04-04 17:06:22.588173 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: b (0x62)[0m
+[[38;5;27m2023-04-04 17:06:22.588181 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: b (0x62)[0m
+[[38;5;27m2023-04-04 17:06:22.588190 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: b (0x62)[0m
+[[38;5;27m2023-04-04 17:06:22.588199 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: b (0x62)[0m
+[[38;5;27m2023-04-04 17:06:22.588207 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: b (0x62)[0m
+[[38;5;27m2023-04-04 17:06:22.588216 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: b (0x62)[0m
+[[38;5;27m2023-04-04 17:06:22.588224 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: b (0x62)[0m
+[[38;5;27m2023-04-04 17:06:22.588232 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: b (0x62)[0m
+[[38;5;27m2023-04-04 17:06:22.588241 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:06:22.588249 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:06:22.588258 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:06:22.588266 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: w (0x77)[0m
+[[38;5;27m2023-04-04 17:06:22.588275 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: w (0x77)[0m
+[[38;5;27m2023-04-04 17:06:22.588284 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: 
+ (0x0a)[0m
+[[38;5;27m2023-04-04 17:06:22.588292 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:06:22.588301 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: 
+ (0x0a)[0m
+[[38;5;27m2023-04-04 17:06:22.588311 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: w (0x77)[0m
+[[38;5;27m2023-04-04 17:06:22.588317 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: w (0x77)[0m
+[[38;5;27m2023-04-04 17:06:22.588327 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:06:22.588337 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: 
+ (0x0a)[0m
+[[38;5;27m2023-04-04 17:06:22.588345 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: w (0x77)[0m
+[[38;5;27m2023-04-04 17:06:22.588354 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:06:22.588362 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:06:22.588370 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:06:22.588378 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:06:22.588397 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:06:22.588405 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:06:22.588415 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: 
+ (0x0a)[0m
+[[38;5;27m2023-04-04 17:06:22.588423 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: w (0x77)[0m
+[[38;5;27m2023-04-04 17:06:22.588432 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: w (0x77)[0m
+[[38;5;27m2023-04-04 17:06:22.588440 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: w (0x77)[0m
+[[38;5;27m2023-04-04 17:06:22.588446 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:06:22.588452 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: 
+ (0x0a)[0m
+[[38;5;27m2023-04-04 17:06:22.588459 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:06:22.588465 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:06:22.588473 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:06:22.588481 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: w (0x77)[0m
+[[38;5;27m2023-04-04 17:06:22.588489 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: 
+ (0x0a)[0m
+[[38;5;27m2023-04-04 17:06:22.588499 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:06:22.588507 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:06:22.588515 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:06:22.588523 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:06:22.588532 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:06:22.588541 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:06:22.588549 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: w (0x77)[0m
+[[38;5;27m2023-04-04 17:06:22.588557 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: w (0x77)[0m
+[[38;5;27m2023-04-04 17:06:22.588565 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: w (0x77)[0m
+[[38;5;27m2023-04-04 17:06:22.588573 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: 
+ (0x0a)[0m
+[2023-04-04 17:06:22.588591 -07:00] INFO [src/instance/main.rs:83] [fd: 5] Starting emulation. FPS: 30, limit: 2000
+[[38;5;27m2023-04-04 17:06:22.588684 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:06:22.588692 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:06:22.588699 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:06:22.588711 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:06:22.588717 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: w (0x77)[0m
+[[38;5;27m2023-04-04 17:06:22.588723 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: w (0x77)[0m
+[[38;5;27m2023-04-04 17:06:22.588730 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: 
+ (0x0a)[0m
+[[38;5;27m2023-04-04 17:06:22.588736 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: s (0x73)[0m
+[[38;5;27m2023-04-04 17:06:22.588742 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: s (0x73)[0m
+[[38;5;27m2023-04-04 17:06:22.588748 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:06:22.588754 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:06:22.588761 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: 
+ (0x0a)[0m
+[[38;5;27m2023-04-04 17:06:22.588767 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: s (0x73)[0m
+[[38;5;27m2023-04-04 17:06:22.588773 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:06:22.588779 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: 
+ (0x0a)[0m
+[[38;5;27m2023-04-04 17:06:22.588785 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: w (0x77)[0m
+[[38;5;27m2023-04-04 17:06:22.588791 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: w (0x77)[0m
+[[38;5;27m2023-04-04 17:06:22.588797 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: w (0x77)[0m
+[[38;5;27m2023-04-04 17:06:22.588804 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:06:22.588810 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:06:22.588816 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: 
+ (0x0a)[0m
+[[38;5;27m2023-04-04 17:06:22.588822 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:06:22.588828 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:06:22.588836 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:06:22.588842 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:06:22.588848 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: 
+ (0x0a)[0m
+[[38;5;27m2023-04-04 17:06:22.588855 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:06:22.588861 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: w (0x77)[0m
+[[38;5;27m2023-04-04 17:06:22.588867 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: s (0x73)[0m
+[[38;5;27m2023-04-04 17:06:22.588873 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: s (0x73)[0m
+[[38;5;27m2023-04-04 17:06:22.588879 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: s (0x73)[0m
+[[38;5;27m2023-04-04 17:06:22.588885 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: 
+ (0x0a)[0m
+[[38;5;27m2023-04-04 17:06:22.588892 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: s (0x73)[0m
+[[38;5;27m2023-04-04 17:06:22.588898 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:06:22.588904 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:06:22.588910 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:06:22.588917 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:06:22.588923 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: s (0x73)[0m
+[[38;5;27m2023-04-04 17:06:22.588930 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: 
+ (0x0a)[0m
+[[38;5;27m2023-04-04 17:06:22.588936 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:06:22.588943 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:06:22.588949 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:06:22.588955 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: 
+ (0x0a)[0m
+[[38;5;27m2023-04-04 17:06:22.588961 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:06:22.588968 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:06:22.588974 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: 
+ (0x0a)[0m
+[[38;5;27m2023-04-04 17:06:22.588980 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:06:22.588987 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:06:22.588993 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:06:22.588999 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:06:22.589005 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: 
+ (0x0a)[0m
+[[38;5;27m2023-04-04 17:06:22.589012 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: b (0x62)[0m
+[[38;5;27m2023-04-04 17:06:22.589018 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: w (0x77)[0m
+[[38;5;27m2023-04-04 17:06:22.589024 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: w (0x77)[0m
+[[38;5;27m2023-04-04 17:06:22.589030 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: w (0x77)[0m
+[[38;5;27m2023-04-04 17:06:22.589036 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: w (0x77)[0m
+[[38;5;27m2023-04-04 17:06:22.589043 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:06:22.589049 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: s (0x73)[0m
+[[38;5;27m2023-04-04 17:06:22.589055 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input:   (0x20)[0m
+[[38;5;27m2023-04-04 17:06:22.589061 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: 
+ (0x0a)[0m
+[[38;5;27m2023-04-04 17:06:22.589067 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: w (0x77)[0m
+[[38;5;27m2023-04-04 17:06:22.589073 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: w (0x77)[0m
+[[38;5;27m2023-04-04 17:06:22.589079 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:06:22.589086 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:06:22.589092 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:06:22.589098 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:06:22.589104 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: s (0x73)[0m
+[[38;5;27m2023-04-04 17:06:22.589110 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: 
+ (0x0a)[0m
+[[38;5;27m2023-04-04 17:06:22.589116 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:06:22.589122 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:06:22.589128 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:06:22.589135 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:06:22.589141 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:06:22.589147 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: s (0x73)[0m
+[[38;5;27m2023-04-04 17:06:22.589177 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: s (0x73)[0m
+[[38;5;27m2023-04-04 17:06:22.589209 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: 
+ (0x0a)[0m
+[[38;5;27m2023-04-04 17:06:22.589219 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:06:22.589226 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: w (0x77)[0m
+[[38;5;27m2023-04-04 17:06:22.589233 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: w (0x77)[0m
+[[38;5;27m2023-04-04 17:06:22.589240 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:06:22.589246 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: 
+ (0x0a)[0m
+[[38;5;27m2023-04-04 17:06:22.589253 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:06:22.589259 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:06:22.589266 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:06:22.589274 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:06:22.589280 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:06:22.589287 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:06:22.589293 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:06:22.589299 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: s (0x73)[0m
+[[38;5;27m2023-04-04 17:06:22.589305 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: 
+ (0x0a)[0m
+[[38;5;27m2023-04-04 17:06:22.589311 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:06:22.589317 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:06:22.589323 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:06:22.589329 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:06:22.589337 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: w (0x77)[0m
+[[38;5;27m2023-04-04 17:06:22.589344 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: 
+ (0x0a)[0m
+[[38;5;208m2023-04-04 17:06:24.784917 -07:00[0m] [38;5;208mWARN[0m [src/instance/main.rs:72] [38;5;208m[fd: 5][0m [38;5;208mRecv thread died[0m
+[[38;5;208m2023-04-04 17:06:25.402566 -07:00[0m] [38;5;208mWARN[0m [src/instance/main.rs:93] [38;5;208m[fd: 5][0m [38;5;208mNES powered off[0m
+[2023-04-04 17:06:25.402765 -07:00] INFO [src/instance/main.rs:149] [fd: 5] Instance died.
+[2023-04-04 17:06:25.403191 -07:00] INFO [src/server/runners/process.rs:48] [fd: N/A] Instance 5 exited with status Ok(ExitStatus(unix_wait_status(0)))
+[[38;5;196m2023-04-04 17:06:25.403268 -07:00[0m] [38;5;196mERROR[0m [src/server/server.rs:90] [38;5;196m[fd: N/A][0m [38;5;196mClient disconnected: ClientId(127.0.0.1:56232) (0 connected)[0m
+[2023-04-04 17:06:26.899192 -07:00] INFO [src/server/server.rs:94] [fd: N/A] Client soft-connect: ClientId(127.0.0.1:56253) (0 connected)
+[2023-04-04 17:06:26.899880 -07:00] INFO [src/server/runners/process.rs:44] [fd: N/A] Spawned instance for fd: 5, pid: 82804
+[2023-04-04 17:06:26.899924 -07:00] INFO [src/server/server.rs:114] [fd: N/A] Client connected! ClientId(127.0.0.1:56253)
+[2023-04-04 17:06:26.903430 -07:00] INFO [src/instance/main.rs:109] [fd: 5] Instance started. FD: Ok("5"), ROM: "./included-roms/muffin_kicker.nes"
+[[38;5;27m2023-04-04 17:06:26.903703 -07:00[0m] [38;5;27mDEBUG[0m [src/shared/resources.rs:50] [38;5;27m[fd: 5][0m [38;5;27mLoading included ROM: "./included-roms/muffin_kicker.nes"[0m
+[2023-04-04 17:06:26.904449 -07:00] INFO [src/instance/main.rs:64] [fd: 5] Starting recv thread.
+[[38;5;27m2023-04-04 17:06:26.904505 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: b (0x62)[0m
+[[38;5;27m2023-04-04 17:06:26.904515 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: b (0x62)[0m
+[2023-04-04 17:06:26.904527 -07:00] INFO [src/instance/main.rs:83] [fd: 5] Starting emulation. FPS: 30, limit: 2000
+[[38;5;27m2023-04-04 17:06:26.904606 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: b (0x62)[0m
+[[38;5;27m2023-04-04 17:06:26.904639 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: b (0x62)[0m
+[[38;5;27m2023-04-04 17:06:26.904650 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: b (0x62)[0m
+[[38;5;27m2023-04-04 17:06:26.904659 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: b (0x62)[0m
+[[38;5;27m2023-04-04 17:06:26.904665 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: b (0x62)[0m
+[[38;5;27m2023-04-04 17:06:26.904679 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: b (0x62)[0m
+[[38;5;27m2023-04-04 17:06:26.904686 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: b (0x62)[0m
+[[38;5;27m2023-04-04 17:06:26.904693 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: s (0x73)[0m
+[[38;5;27m2023-04-04 17:06:26.904700 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: n (0x6e)[0m
+[[38;5;27m2023-04-04 17:06:26.904706 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: b (0x62)[0m
+[[38;5;27m2023-04-04 17:06:26.904712 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: b (0x62)[0m
+[[38;5;27m2023-04-04 17:06:26.904718 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: b (0x62)[0m
+[[38;5;27m2023-04-04 17:06:26.904725 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: b (0x62)[0m
+[[38;5;27m2023-04-04 17:06:26.904732 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: b (0x62)[0m
+[[38;5;27m2023-04-04 17:06:26.904739 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: b (0x62)[0m
+[[38;5;27m2023-04-04 17:06:26.904745 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: b (0x62)[0m
+[[38;5;27m2023-04-04 17:06:26.904752 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: b (0x62)[0m
+[[38;5;27m2023-04-04 17:06:26.904758 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: b (0x62)[0m
+[[38;5;27m2023-04-04 17:06:26.904764 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: b (0x62)[0m
+[[38;5;27m2023-04-04 17:06:26.904770 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:06:26.904776 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:06:26.904783 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:06:26.904789 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: w (0x77)[0m
+[[38;5;27m2023-04-04 17:06:26.904795 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: w (0x77)[0m
+[[38;5;27m2023-04-04 17:06:26.904801 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: 
+ (0x0a)[0m
+[[38;5;27m2023-04-04 17:06:26.904807 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:06:26.904813 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: 
+ (0x0a)[0m
+[[38;5;27m2023-04-04 17:06:26.904820 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: w (0x77)[0m
+[[38;5;27m2023-04-04 17:06:26.904826 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: w (0x77)[0m
+[[38;5;27m2023-04-04 17:06:26.904833 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:06:26.904839 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: 
+ (0x0a)[0m
+[[38;5;27m2023-04-04 17:06:26.904845 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: w (0x77)[0m
+[[38;5;27m2023-04-04 17:06:26.904851 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:06:26.904858 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:06:26.904864 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:06:26.904870 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:06:26.904876 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:06:26.904882 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:06:26.904888 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: 
+ (0x0a)[0m
+[[38;5;27m2023-04-04 17:06:26.904894 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: w (0x77)[0m
+[[38;5;27m2023-04-04 17:06:26.904901 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: w (0x77)[0m
+[[38;5;27m2023-04-04 17:06:26.904907 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: w (0x77)[0m
+[[38;5;27m2023-04-04 17:06:26.904913 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:06:26.904919 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: 
+ (0x0a)[0m
+[[38;5;27m2023-04-04 17:06:26.904926 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:06:26.904932 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:06:26.904938 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:06:26.904945 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: w (0x77)[0m
+[[38;5;27m2023-04-04 17:06:26.904951 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: 
+ (0x0a)[0m
+[[38;5;27m2023-04-04 17:06:26.904958 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:06:26.904964 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:06:26.904970 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:06:26.904976 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:06:26.904982 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:06:26.904988 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:06:26.904994 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: w (0x77)[0m
+[[38;5;27m2023-04-04 17:06:26.905000 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: w (0x77)[0m
+[[38;5;27m2023-04-04 17:06:26.905006 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: w (0x77)[0m
+[[38;5;27m2023-04-04 17:06:26.905012 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: 
+ (0x0a)[0m
+[[38;5;27m2023-04-04 17:06:26.905018 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:06:26.905026 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:06:26.905032 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:06:26.905038 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:06:26.905044 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: w (0x77)[0m
+[[38;5;27m2023-04-04 17:06:26.905050 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: w (0x77)[0m
+[[38;5;27m2023-04-04 17:06:26.905056 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: 
+ (0x0a)[0m
+[[38;5;27m2023-04-04 17:06:26.905063 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: s (0x73)[0m
+[[38;5;27m2023-04-04 17:06:26.905069 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: s (0x73)[0m
+[[38;5;27m2023-04-04 17:06:26.905075 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:06:26.905081 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:06:26.905087 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: 
+ (0x0a)[0m
+[[38;5;27m2023-04-04 17:06:26.905093 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: s (0x73)[0m
+[[38;5;27m2023-04-04 17:06:26.905100 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:06:26.905106 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: 
+ (0x0a)[0m
+[[38;5;27m2023-04-04 17:06:26.905112 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: w (0x77)[0m
+[[38;5;27m2023-04-04 17:06:26.905118 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: w (0x77)[0m
+[[38;5;27m2023-04-04 17:06:26.905124 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: w (0x77)[0m
+[[38;5;27m2023-04-04 17:06:26.905131 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:06:26.905137 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:06:26.905144 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: 
+ (0x0a)[0m
+[[38;5;27m2023-04-04 17:06:26.905151 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:06:26.905204 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:06:26.905215 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:06:26.905221 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:06:26.905228 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: 
+ (0x0a)[0m
+[[38;5;27m2023-04-04 17:06:26.905238 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:06:26.905244 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: w (0x77)[0m
+[[38;5;27m2023-04-04 17:06:26.905252 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: s (0x73)[0m
+[[38;5;27m2023-04-04 17:06:26.905258 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: s (0x73)[0m
+[[38;5;27m2023-04-04 17:06:26.905265 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: s (0x73)[0m
+[[38;5;27m2023-04-04 17:06:26.905271 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: 
+ (0x0a)[0m
+[[38;5;27m2023-04-04 17:06:26.905279 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: s (0x73)[0m
+[[38;5;27m2023-04-04 17:06:26.905285 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:06:26.905293 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:06:26.905299 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:06:26.905306 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:06:26.905312 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: s (0x73)[0m
+[[38;5;27m2023-04-04 17:06:26.905318 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: 
+ (0x0a)[0m
+[[38;5;27m2023-04-04 17:06:26.905324 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:06:26.905330 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:06:26.905336 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:06:26.905342 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: 
+ (0x0a)[0m
+[[38;5;27m2023-04-04 17:06:26.905348 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:06:26.905354 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:06:26.905360 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: 
+ (0x0a)[0m
+[[38;5;27m2023-04-04 17:06:26.905366 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:06:26.905372 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:06:26.905378 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:06:26.905385 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:06:26.905391 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: 
+ (0x0a)[0m
+[[38;5;27m2023-04-04 17:06:26.905397 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: b (0x62)[0m
+[[38;5;27m2023-04-04 17:06:26.905403 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: w (0x77)[0m
+[[38;5;27m2023-04-04 17:06:26.905409 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: w (0x77)[0m
+[[38;5;27m2023-04-04 17:06:26.905415 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: w (0x77)[0m
+[[38;5;27m2023-04-04 17:06:26.905421 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: w (0x77)[0m
+[[38;5;27m2023-04-04 17:06:26.905427 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:06:26.905433 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: s (0x73)[0m
+[[38;5;27m2023-04-04 17:06:26.905440 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input:   (0x20)[0m
+[[38;5;27m2023-04-04 17:06:26.905446 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: 
+ (0x0a)[0m
+[[38;5;27m2023-04-04 17:06:26.905452 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: w (0x77)[0m
+[[38;5;27m2023-04-04 17:06:26.905458 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: w (0x77)[0m
+[[38;5;27m2023-04-04 17:06:26.905464 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:06:26.905470 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:06:26.905478 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:06:26.905487 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:06:26.905493 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: s (0x73)[0m
+[[38;5;27m2023-04-04 17:06:26.905499 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: 
+ (0x0a)[0m
+[[38;5;27m2023-04-04 17:06:26.905505 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:06:26.905514 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:06:26.905520 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:06:26.905526 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:06:26.905532 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:06:26.905538 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: s (0x73)[0m
+[[38;5;27m2023-04-04 17:06:26.905544 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: s (0x73)[0m
+[[38;5;27m2023-04-04 17:06:26.905550 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: 
+ (0x0a)[0m
+[[38;5;27m2023-04-04 17:06:26.905556 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:06:26.905563 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: w (0x77)[0m
+[[38;5;27m2023-04-04 17:06:26.905569 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: w (0x77)[0m
+[[38;5;27m2023-04-04 17:06:26.905575 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:06:26.905581 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: 
+ (0x0a)[0m
+[[38;5;27m2023-04-04 17:06:26.905588 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:06:26.905594 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:06:26.905602 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:06:26.905608 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:06:26.905614 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:06:26.905621 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:06:26.905627 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:06:26.905633 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: s (0x73)[0m
+[[38;5;27m2023-04-04 17:06:26.905639 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: 
+ (0x0a)[0m
+[[38;5;27m2023-04-04 17:06:26.905646 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:06:26.905653 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:06:26.905659 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:06:26.905665 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:06:26.905671 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: w (0x77)[0m
+[[38;5;27m2023-04-04 17:06:26.905679 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: 
+ (0x0a)[0m
+[[38;5;208m2023-04-04 17:06:38.749326 -07:00[0m] [38;5;208mWARN[0m [src/instance/main.rs:72] [38;5;208m[fd: 5][0m [38;5;208mRecv thread died[0m
+[[38;5;208m2023-04-04 17:06:38.794192 -07:00[0m] [38;5;208mWARN[0m [src/instance/main.rs:93] [38;5;208m[fd: 5][0m [38;5;208mNES powered off[0m
+[2023-04-04 17:06:38.794363 -07:00] INFO [src/instance/main.rs:149] [fd: 5] Instance died.
+[2023-04-04 17:06:38.794719 -07:00] INFO [src/server/runners/process.rs:48] [fd: N/A] Instance 5 exited with status Ok(ExitStatus(unix_wait_status(0)))
+[[38;5;196m2023-04-04 17:06:38.794798 -07:00[0m] [38;5;196mERROR[0m [src/server/server.rs:90] [38;5;196m[fd: N/A][0m [38;5;196mClient disconnected: ClientId(127.0.0.1:56253) (0 connected)[0m
+[2023-04-04 17:07:07.366351 -07:00] INFO [src/server/server.rs:94] [fd: N/A] Client soft-connect: ClientId(127.0.0.1:56270) (0 connected)
+[2023-04-04 17:07:07.366691 -07:00] INFO [src/server/runners/process.rs:44] [fd: N/A] Spawned instance for fd: 5, pid: 82909
+[2023-04-04 17:07:07.366731 -07:00] INFO [src/server/server.rs:114] [fd: N/A] Client connected! ClientId(127.0.0.1:56270)
+[2023-04-04 17:07:07.368969 -07:00] INFO [src/instance/main.rs:109] [fd: 5] Instance started. FD: Ok("5"), ROM: "./included-roms/muffin_kicker.nes"
+[[38;5;27m2023-04-04 17:07:07.369166 -07:00[0m] [38;5;27mDEBUG[0m [src/shared/resources.rs:50] [38;5;27m[fd: 5][0m [38;5;27mLoading included ROM: "./included-roms/muffin_kicker.nes"[0m
+[2023-04-04 17:07:10.246225 -07:00] INFO [src/instance/main.rs:64] [fd: 5] Starting recv thread.
+[2023-04-04 17:07:10.246529 -07:00] INFO [src/instance/main.rs:83] [fd: 5] Starting emulation. FPS: 30, limit: 2000
+[[38;5;27m2023-04-04 17:07:10.391279 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: b (0x62)[0m
+[[38;5;27m2023-04-04 17:07:10.561172 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: b (0x62)[0m
+[[38;5;27m2023-04-04 17:07:10.717162 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: b (0x62)[0m
+[[38;5;27m2023-04-04 17:07:10.890487 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: b (0x62)[0m
+[[38;5;27m2023-04-04 17:07:11.034615 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: b (0x62)[0m
+[[38;5;27m2023-04-04 17:07:11.188974 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: b (0x62)[0m
+[[38;5;27m2023-04-04 17:07:11.367152 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: b (0x62)[0m
+[[38;5;27m2023-04-04 17:07:11.552594 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: b (0x62)[0m
+[[38;5;27m2023-04-04 17:07:11.741718 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: b (0x62)[0m
+[[38;5;27m2023-04-04 17:07:13.243375 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: s (0x73)[0m
+[[38;5;27m2023-04-04 17:07:13.822029 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: 
+ (0x0a)[0m
+[[38;5;27m2023-04-04 17:07:16.671419 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: b (0x62)[0m
+[[38;5;27m2023-04-04 17:07:16.815685 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: b (0x62)[0m
+[[38;5;27m2023-04-04 17:07:16.955777 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: b (0x62)[0m
+[[38;5;27m2023-04-04 17:07:17.124472 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: b (0x62)[0m
+[[38;5;27m2023-04-04 17:07:17.278241 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: b (0x62)[0m
+[[38;5;27m2023-04-04 17:07:17.444335 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: b (0x62)[0m
+[[38;5;27m2023-04-04 17:07:17.599664 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: b (0x62)[0m
+[[38;5;27m2023-04-04 17:07:17.778276 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: b (0x62)[0m
+[[38;5;27m2023-04-04 17:07:17.968346 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: b (0x62)[0m
+[[38;5;27m2023-04-04 17:07:18.130857 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: b (0x62)[0m
+[[38;5;27m2023-04-04 17:07:19.775881 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: 
+ (0x0a)[0m
+[[38;5;27m2023-04-04 17:07:23.421565 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:07:28.203524 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: s (0x73)[0m
+[[38;5;27m2023-04-04 17:07:29.024378 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: s (0x73)[0m
+[[38;5;27m2023-04-04 17:07:29.772227 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:07:30.586070 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: 
+ (0x0a)[0m
+[[38;5;27m2023-04-04 17:07:32.266220 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:07:32.431212 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:07:32.589265 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:07:32.726720 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:07:33.493312 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: s (0x73)[0m
+[[38;5;27m2023-04-04 17:07:33.813866 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: 
+ (0x0a)[0m
+[[38;5;27m2023-04-04 17:07:37.650183 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:07:37.816063 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:07:37.979634 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:07:38.136346 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:07:38.319008 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: w (0x77)[0m
+[[38;5;27m2023-04-04 17:07:39.163896 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: 
+ (0x0a)[0m
+[[38;5;27m2023-04-04 17:07:43.965922 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:07:44.074566 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: w (0x77)[0m
+[[38;5;27m2023-04-04 17:07:44.178658 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:07:45.078132 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: 
+ (0x0a)[0m
+[[38;5;27m2023-04-04 17:07:48.822156 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:07:48.886543 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: s (0x73)[0m
+[[38;5;27m2023-04-04 17:07:49.723990 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: 
+ (0x0a)[0m
+[[38;5;27m2023-04-04 17:07:51.922305 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:07:52.129343 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: w (0x77)[0m
+[[38;5;27m2023-04-04 17:07:52.303039 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:07:52.507373 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:07:53.535535 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:07:54.046550 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:07:54.579368 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: 
+ (0x0a)[0m
+[[38;5;27m2023-04-04 17:07:58.294842 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: w (0x77)[0m
+[[38;5;27m2023-04-04 17:07:58.461074 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: w (0x77)[0m
+[[38;5;27m2023-04-04 17:07:58.621434 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: w (0x77)[0m
+[[38;5;27m2023-04-04 17:07:58.763708 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: w (0x77)[0m
+[[38;5;27m2023-04-04 17:07:59.771419 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: w (0x77)[0m
+[[38;5;27m2023-04-04 17:08:01.334803 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: w (0x77)[0m
+[[38;5;27m2023-04-04 17:08:01.577732 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: w (0x77)[0m
+[[38;5;27m2023-04-04 17:08:02.301295 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:08:02.450410 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:08:03.217797 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:08:03.783945 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: 
+ (0x0a)[0m
+[[38;5;27m2023-04-04 17:08:07.367945 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:08:07.503165 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:08:08.379437 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: 
+ (0x0a)[0m
+[[38;5;27m2023-04-04 17:08:09.855444 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:08:10.014246 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:08:10.179178 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:08:10.344844 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:08:10.507115 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:08:10.681799 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:08:11.455770 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:08:12.336278 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: 
+ (0x0a)[0m
+[[38;5;27m2023-04-04 17:08:14.428994 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:08:14.569326 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:08:14.723475 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:08:14.866754 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:08:15.763244 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: 
+ (0x0a)[0m
+[[38;5;27m2023-04-04 17:08:18.463743 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: w (0x77)[0m
+[[38;5;27m2023-04-04 17:08:18.628422 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: w (0x77)[0m
+[[38;5;27m2023-04-04 17:08:18.797381 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: w (0x77)[0m
+[[38;5;27m2023-04-04 17:08:19.597730 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:08:19.742437 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:08:19.883869 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:08:20.645742 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:08:21.053331 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: 
+ (0x0a)[0m
+[[38;5;27m2023-04-04 17:08:21.321630 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:08:21.462961 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:08:21.641573 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: s (0x73)[0m
+[[38;5;27m2023-04-04 17:08:22.451809 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: 
+ (0x0a)[0m
+[[38;5;27m2023-04-04 17:08:24.438706 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:08:24.586342 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:08:24.769003 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:08:25.438564 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:08:25.588374 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:08:25.750171 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:08:25.910147 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:08:26.817889 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: w (0x77)[0m
+[[38;5;27m2023-04-04 17:08:27.565927 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: 
+ (0x0a)[0m
+[[38;5;27m2023-04-04 17:08:30.412151 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:08:30.555663 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:08:30.691110 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:08:30.854662 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:08:31.010775 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:08:31.150703 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:08:31.900876 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:08:32.042279 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:08:32.995565 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: 
+ (0x0a)[0m
+[[38;5;27m2023-04-04 17:08:36.583282 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: s (0x73)[0m
+[[38;5;27m2023-04-04 17:08:37.041666 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:08:37.199694 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:08:37.335911 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:08:37.490475 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:08:37.630374 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:08:38.576941 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: 
+ (0x0a)[0m
+[[38;5;27m2023-04-04 17:08:41.930952 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: s (0x73)[0m
+[[38;5;27m2023-04-04 17:08:42.102392 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: s (0x73)[0m
+[[38;5;27m2023-04-04 17:08:42.843220 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:08:42.983172 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:08:43.856599 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: 
+ (0x0a)[0m
+[[38;5;27m2023-04-04 17:08:53.885730 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: w (0x77)[0m
+[[38;5;27m2023-04-04 17:08:54.009362 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: w (0x77)[0m
+[[38;5;27m2023-04-04 17:08:54.170406 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: w (0x77)[0m
+[[38;5;27m2023-04-04 17:08:54.341709 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: w (0x77)[0m
+[[38;5;27m2023-04-04 17:08:54.540463 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:08:54.689106 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:08:54.854903 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:08:55.024696 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:08:55.188042 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:08:56.071451 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:08:56.214286 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:08:57.168798 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: 
+ (0x0a)[0m
+[[38;5;27m2023-04-04 17:09:07.877451 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: b (0x62)[0m
+[[38;5;27m2023-04-04 17:09:09.347133 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: s (0x73)[0m
+[[38;5;27m2023-04-04 17:09:09.469742 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: s (0x73)[0m
+[[38;5;27m2023-04-04 17:09:10.247269 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: 
+ (0x0a)[0m
+[[38;5;27m2023-04-04 17:09:14.036872 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:09:14.174353 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:09:14.331600 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:09:14.477569 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:09:16.177864 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: s (0x73)[0m
+[[38;5;27m2023-04-04 17:09:17.363914 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:09:17.570134 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: s (0x73)[0m
+[[38;5;27m2023-04-04 17:09:18.399661 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: 
+ (0x0a)[0m
+[[38;5;27m2023-04-04 17:09:18.703066 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:09:18.853320 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:09:19.041238 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:09:19.179345 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:09:20.075413 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: 
+ (0x0a)[0m
+[[38;5;27m2023-04-04 17:09:21.019293 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:09:21.193660 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:09:22.986534 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: w (0x77)[0m
+[[38;5;27m2023-04-04 17:09:23.151585 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: w (0x77)[0m
+[[38;5;27m2023-04-04 17:09:23.983732 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: 
+ (0x0a)[0m
+[[38;5;27m2023-04-04 17:09:24.375438 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:09:24.559126 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:09:24.702249 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:09:25.482030 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:09:26.252471 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: s (0x73)[0m
+[[38;5;27m2023-04-04 17:09:28.456826 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: 
+ (0x0a)[0m
+[[38;5;208m2023-04-04 17:09:32.364519 -07:00[0m] [38;5;208mWARN[0m [src/instance/main.rs:72] [38;5;208m[fd: 5][0m [38;5;208mRecv thread died[0m
+[[38;5;208m2023-04-04 17:09:32.404577 -07:00[0m] [38;5;208mWARN[0m [src/instance/main.rs:93] [38;5;208m[fd: 5][0m [38;5;208mNES powered off[0m
+[2023-04-04 17:09:32.404660 -07:00] INFO [src/instance/main.rs:149] [fd: 5] Instance died.
+[2023-04-04 17:09:32.404961 -07:00] INFO [src/server/runners/process.rs:48] [fd: N/A] Instance 5 exited with status Ok(ExitStatus(unix_wait_status(0)))
+[[38;5;196m2023-04-04 17:09:32.405034 -07:00[0m] [38;5;196mERROR[0m [src/server/server.rs:90] [38;5;196m[fd: N/A][0m [38;5;196mClient disconnected: ClientId(127.0.0.1:56270) (0 connected)[0m
+[2023-04-04 17:09:37.489250 -07:00] INFO [src/server/server.rs:94] [fd: N/A] Client soft-connect: ClientId(127.0.0.1:56275) (0 connected)
+[2023-04-04 17:09:37.489641 -07:00] INFO [src/server/runners/process.rs:44] [fd: N/A] Spawned instance for fd: 5, pid: 83084
+[2023-04-04 17:09:37.489672 -07:00] INFO [src/server/server.rs:114] [fd: N/A] Client connected! ClientId(127.0.0.1:56275)
+[2023-04-04 17:09:37.491924 -07:00] INFO [src/instance/main.rs:109] [fd: 5] Instance started. FD: Ok("5"), ROM: "./included-roms/muffin_kicker.nes"
+[[38;5;27m2023-04-04 17:09:37.492086 -07:00[0m] [38;5;27mDEBUG[0m [src/shared/resources.rs:50] [38;5;27m[fd: 5][0m [38;5;27mLoading included ROM: "./included-roms/muffin_kicker.nes"[0m
+[2023-04-04 17:09:37.492194 -07:00] INFO [src/instance/main.rs:64] [fd: 5] Starting recv thread.
+[[38;5;27m2023-04-04 17:09:37.492260 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: b (0x62)[0m
+[[38;5;27m2023-04-04 17:09:37.492276 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: b (0x62)[0m
+[[38;5;27m2023-04-04 17:09:37.492285 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: b (0x62)[0m
+[[38;5;27m2023-04-04 17:09:37.492293 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: b (0x62)[0m
+[[38;5;27m2023-04-04 17:09:37.492304 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: b (0x62)[0m
+[[38;5;27m2023-04-04 17:09:37.492317 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: b (0x62)[0m
+[[38;5;27m2023-04-04 17:09:37.492330 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: b (0x62)[0m
+[[38;5;27m2023-04-04 17:09:37.492341 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: b (0x62)[0m
+[[38;5;27m2023-04-04 17:09:37.492353 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: b (0x62)[0m
+[[38;5;27m2023-04-04 17:09:37.492360 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: s (0x73)[0m
+[[38;5;27m2023-04-04 17:09:37.492370 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: 
+ (0x0a)[0m
+[[38;5;27m2023-04-04 17:09:37.492377 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: b (0x62)[0m
+[[38;5;27m2023-04-04 17:09:37.492384 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: b (0x62)[0m
+[[38;5;27m2023-04-04 17:09:37.492390 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: b (0x62)[0m
+[[38;5;27m2023-04-04 17:09:37.492400 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: b (0x62)[0m
+[[38;5;27m2023-04-04 17:09:37.492410 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: b (0x62)[0m
+[[38;5;27m2023-04-04 17:09:37.492417 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: b (0x62)[0m
+[2023-04-04 17:09:37.492432 -07:00] INFO [src/instance/main.rs:83] [fd: 5] Starting emulation. FPS: 30, limit: 2000
+[[38;5;27m2023-04-04 17:09:37.492539 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: b (0x62)[0m
+[[38;5;27m2023-04-04 17:09:37.492576 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: b (0x62)[0m
+[[38;5;27m2023-04-04 17:09:37.492591 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: b (0x62)[0m
+[[38;5;27m2023-04-04 17:09:37.492599 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: b (0x62)[0m
+[[38;5;27m2023-04-04 17:09:37.492606 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: 
+ (0x0a)[0m
+[[38;5;27m2023-04-04 17:09:37.492615 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:09:37.492621 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: s (0x73)[0m
+[[38;5;27m2023-04-04 17:09:37.492628 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: s (0x73)[0m
+[[38;5;27m2023-04-04 17:09:37.492635 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:09:37.492644 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: 
+ (0x0a)[0m
+[[38;5;27m2023-04-04 17:09:37.492650 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:09:37.492658 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:09:37.492665 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:09:37.492671 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:09:37.492684 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: s (0x73)[0m
+[[38;5;27m2023-04-04 17:09:37.492691 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: 
+ (0x0a)[0m
+[[38;5;27m2023-04-04 17:09:37.492698 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:09:37.492704 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:09:37.492710 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:09:37.492716 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:09:37.492723 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: w (0x77)[0m
+[[38;5;27m2023-04-04 17:09:37.492729 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: 
+ (0x0a)[0m
+[[38;5;27m2023-04-04 17:09:37.492735 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:09:37.492741 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: w (0x77)[0m
+[[38;5;27m2023-04-04 17:09:37.492747 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:09:37.492753 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: 
+ (0x0a)[0m
+[[38;5;27m2023-04-04 17:09:37.492759 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:09:37.492767 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: s (0x73)[0m
+[[38;5;27m2023-04-04 17:09:37.492773 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: 
+ (0x0a)[0m
+[[38;5;27m2023-04-04 17:09:37.492780 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:09:37.492787 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: w (0x77)[0m
+[[38;5;27m2023-04-04 17:09:37.492793 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:09:37.492799 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:09:37.492805 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:09:37.492811 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:09:37.492818 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: 
+ (0x0a)[0m
+[[38;5;27m2023-04-04 17:09:37.492824 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: w (0x77)[0m
+[[38;5;27m2023-04-04 17:09:37.492830 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: w (0x77)[0m
+[[38;5;27m2023-04-04 17:09:37.492836 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: w (0x77)[0m
+[[38;5;27m2023-04-04 17:09:37.492843 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: w (0x77)[0m
+[[38;5;27m2023-04-04 17:09:37.492849 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: w (0x77)[0m
+[[38;5;27m2023-04-04 17:09:37.492885 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: w (0x77)[0m
+[[38;5;27m2023-04-04 17:09:37.492897 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: w (0x77)[0m
+[[38;5;27m2023-04-04 17:09:37.492905 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:09:37.492918 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:09:37.492931 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:09:37.492939 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: 
+ (0x0a)[0m
+[[38;5;27m2023-04-04 17:09:37.492945 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:09:37.492952 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:09:37.492959 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: 
+ (0x0a)[0m
+[[38;5;27m2023-04-04 17:09:37.492968 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:09:37.492975 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:09:37.492982 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:09:37.492989 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:09:37.493000 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:09:37.493007 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:09:37.493013 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:09:37.493019 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: 
+ (0x0a)[0m
+[[38;5;27m2023-04-04 17:09:37.493026 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:09:37.493033 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:09:37.493040 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:09:37.493047 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:09:37.493054 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: 
+ (0x0a)[0m
+[[38;5;27m2023-04-04 17:09:37.493060 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: w (0x77)[0m
+[[38;5;27m2023-04-04 17:09:37.493067 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: w (0x77)[0m
+[[38;5;27m2023-04-04 17:09:37.493073 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: w (0x77)[0m
+[[38;5;27m2023-04-04 17:09:37.493080 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:09:37.493087 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:09:37.493094 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:09:37.493101 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:09:37.493108 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: 
+ (0x0a)[0m
+[[38;5;27m2023-04-04 17:09:37.493114 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:09:37.493120 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:09:37.493127 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: s (0x73)[0m
+[[38;5;27m2023-04-04 17:09:37.493134 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: 
+ (0x0a)[0m
+[[38;5;27m2023-04-04 17:09:37.493140 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:09:37.493147 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:09:37.493154 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:09:37.493162 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:09:37.493168 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:09:37.493174 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:09:37.493181 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:09:37.493187 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: w (0x77)[0m
+[[38;5;27m2023-04-04 17:09:37.493194 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: 
+ (0x0a)[0m
+[[38;5;27m2023-04-04 17:09:37.493201 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:09:37.493207 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:09:37.493214 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:09:37.493221 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:09:37.493227 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:09:37.493234 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:09:37.493240 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:09:37.493248 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:09:37.493255 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: 
+ (0x0a)[0m
+[[38;5;27m2023-04-04 17:09:37.493288 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: s (0x73)[0m
+[[38;5;27m2023-04-04 17:09:37.493296 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:09:37.493303 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:09:37.493311 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:09:37.493318 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:09:37.493324 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:09:37.493331 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: 
+ (0x0a)[0m
+[[38;5;27m2023-04-04 17:09:37.493337 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: s (0x73)[0m
+[[38;5;27m2023-04-04 17:09:37.493344 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: s (0x73)[0m
+[[38;5;27m2023-04-04 17:09:37.493350 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:09:37.493357 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:09:37.493363 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: 
+ (0x0a)[0m
+[[38;5;27m2023-04-04 17:09:37.493370 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: w (0x77)[0m
+[[38;5;27m2023-04-04 17:09:37.493376 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: w (0x77)[0m
+[[38;5;27m2023-04-04 17:09:37.493383 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: w (0x77)[0m
+[[38;5;27m2023-04-04 17:09:37.493389 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: w (0x77)[0m
+[[38;5;27m2023-04-04 17:09:37.493396 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:09:37.493402 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:09:37.493409 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:09:37.493415 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:09:37.493422 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:09:37.493429 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:09:37.493438 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:09:37.493444 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: 
+ (0x0a)[0m
+[[38;5;27m2023-04-04 17:09:37.493451 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: b (0x62)[0m
+[[38;5;27m2023-04-04 17:09:37.493457 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: s (0x73)[0m
+[[38;5;27m2023-04-04 17:09:37.493463 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: s (0x73)[0m
+[[38;5;27m2023-04-04 17:09:37.493470 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: 
+ (0x0a)[0m
+[[38;5;27m2023-04-04 17:09:37.493476 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:09:37.493482 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:09:37.493489 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:09:37.493495 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:09:37.493501 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: s (0x73)[0m
+[[38;5;27m2023-04-04 17:09:37.493508 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:09:37.493514 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: s (0x73)[0m
+[[38;5;27m2023-04-04 17:09:37.493521 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: 
+ (0x0a)[0m
+[[38;5;27m2023-04-04 17:09:37.493527 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:09:37.493533 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:09:37.493540 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:09:37.493546 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:09:37.493553 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: 
+ (0x0a)[0m
+[[38;5;27m2023-04-04 17:09:37.493559 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:09:37.493565 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:09:37.493572 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: w (0x77)[0m
+[[38;5;27m2023-04-04 17:09:37.493578 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: w (0x77)[0m
+[[38;5;27m2023-04-04 17:09:37.493585 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: 
+ (0x0a)[0m
+[[38;5;27m2023-04-04 17:09:37.493591 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:09:37.493597 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:09:37.493604 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:09:37.493610 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:09:37.493617 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: s (0x73)[0m
+[[38;5;27m2023-04-04 17:09:37.493624 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: 
+ (0x0a)[0m
+[[38;5;208m2023-04-04 17:09:48.700328 -07:00[0m] [38;5;208mWARN[0m [src/instance/main.rs:72] [38;5;208m[fd: 5][0m [38;5;208mRecv thread died[0m
+[[38;5;208m2023-04-04 17:09:48.731958 -07:00[0m] [38;5;208mWARN[0m [src/instance/main.rs:93] [38;5;208m[fd: 5][0m [38;5;208mNES powered off[0m
+[2023-04-04 17:09:48.732060 -07:00] INFO [src/instance/main.rs:149] [fd: 5] Instance died.
+[2023-04-04 17:09:48.732351 -07:00] INFO [src/server/runners/process.rs:48] [fd: N/A] Instance 5 exited with status Ok(ExitStatus(unix_wait_status(0)))
+[[38;5;196m2023-04-04 17:09:48.732434 -07:00[0m] [38;5;196mERROR[0m [src/server/server.rs:90] [38;5;196m[fd: N/A][0m [38;5;196mClient disconnected: ClientId(127.0.0.1:56275) (0 connected)[0m
+[2023-04-04 17:09:51.194674 -07:00] INFO [src/server/server.rs:94] [fd: N/A] Client soft-connect: ClientId(127.0.0.1:56277) (0 connected)
+[2023-04-04 17:09:51.195160 -07:00] INFO [src/server/runners/process.rs:44] [fd: N/A] Spawned instance for fd: 5, pid: 83107
+[2023-04-04 17:09:51.195207 -07:00] INFO [src/server/server.rs:114] [fd: N/A] Client connected! ClientId(127.0.0.1:56277)
+[2023-04-04 17:09:51.198068 -07:00] INFO [src/instance/main.rs:109] [fd: 5] Instance started. FD: Ok("5"), ROM: "./included-roms/interrupting_muffin_kicker.nes"
+[[38;5;27m2023-04-04 17:09:51.198258 -07:00[0m] [38;5;27mDEBUG[0m [src/shared/resources.rs:50] [38;5;27m[fd: 5][0m [38;5;27mLoading included ROM: "./included-roms/interrupting_muffin_kicker.nes"[0m
+[2023-04-04 17:09:51.198390 -07:00] INFO [src/instance/main.rs:64] [fd: 5] Starting recv thread.
+[[38;5;27m2023-04-04 17:09:51.198500 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: b (0x62)[0m
+[2023-04-04 17:09:51.198514 -07:00] INFO [src/instance/main.rs:83] [fd: 5] Starting emulation. FPS: 30, limit: 2000
+[[38;5;27m2023-04-04 17:09:51.198595 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: b (0x62)[0m
+[[38;5;27m2023-04-04 17:09:51.198608 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: b (0x62)[0m
+[[38;5;27m2023-04-04 17:09:51.198616 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: b (0x62)[0m
+[[38;5;27m2023-04-04 17:09:51.198622 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: b (0x62)[0m
+[[38;5;27m2023-04-04 17:09:51.198629 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: b (0x62)[0m
+[[38;5;27m2023-04-04 17:09:51.198635 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: b (0x62)[0m
+[[38;5;27m2023-04-04 17:09:51.198641 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: b (0x62)[0m
+[[38;5;27m2023-04-04 17:09:51.198647 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: b (0x62)[0m
+[[38;5;27m2023-04-04 17:09:51.198653 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: s (0x73)[0m
+[[38;5;27m2023-04-04 17:09:51.198659 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: 
+ (0x0a)[0m
+[[38;5;27m2023-04-04 17:09:51.198665 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: b (0x62)[0m
+[[38;5;27m2023-04-04 17:09:51.198671 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: b (0x62)[0m
+[[38;5;27m2023-04-04 17:09:51.198676 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: b (0x62)[0m
+[[38;5;27m2023-04-04 17:09:51.198682 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: b (0x62)[0m
+[[38;5;27m2023-04-04 17:09:51.198688 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: b (0x62)[0m
+[[38;5;27m2023-04-04 17:09:51.198693 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: b (0x62)[0m
+[[38;5;27m2023-04-04 17:09:51.198699 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: b (0x62)[0m
+[[38;5;27m2023-04-04 17:09:51.198704 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: b (0x62)[0m
+[[38;5;27m2023-04-04 17:09:51.198710 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: b (0x62)[0m
+[[38;5;27m2023-04-04 17:09:51.198716 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: b (0x62)[0m
+[[38;5;27m2023-04-04 17:09:51.198721 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: 
+ (0x0a)[0m
+[[38;5;27m2023-04-04 17:09:51.198727 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:09:51.198736 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: s (0x73)[0m
+[[38;5;27m2023-04-04 17:09:51.198742 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: s (0x73)[0m
+[[38;5;27m2023-04-04 17:09:51.198748 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:09:51.198753 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: 
+ (0x0a)[0m
+[[38;5;27m2023-04-04 17:09:51.198759 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:09:51.198764 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:09:51.198770 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:09:51.198776 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:09:51.198781 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: s (0x73)[0m
+[[38;5;27m2023-04-04 17:09:51.198787 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: 
+ (0x0a)[0m
+[[38;5;27m2023-04-04 17:09:51.198793 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:09:51.198799 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:09:51.198804 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:09:51.198810 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:09:51.198815 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: w (0x77)[0m
+[[38;5;27m2023-04-04 17:09:51.198821 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: 
+ (0x0a)[0m
+[[38;5;27m2023-04-04 17:09:51.198827 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:09:51.198832 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: w (0x77)[0m
+[[38;5;27m2023-04-04 17:09:51.198838 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:09:51.198843 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: 
+ (0x0a)[0m
+[[38;5;27m2023-04-04 17:09:51.198849 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:09:51.198854 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: s (0x73)[0m
+[[38;5;27m2023-04-04 17:09:51.198860 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: 
+ (0x0a)[0m
+[[38;5;27m2023-04-04 17:09:51.198867 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:09:51.198873 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: w (0x77)[0m
+[[38;5;27m2023-04-04 17:09:51.198878 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:09:51.198884 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:09:51.198890 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:09:51.198895 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:09:51.198901 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: 
+ (0x0a)[0m
+[[38;5;27m2023-04-04 17:09:51.198906 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: w (0x77)[0m
+[[38;5;27m2023-04-04 17:09:51.198912 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: w (0x77)[0m
+[[38;5;27m2023-04-04 17:09:51.198918 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: w (0x77)[0m
+[[38;5;27m2023-04-04 17:09:51.198923 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: w (0x77)[0m
+[[38;5;27m2023-04-04 17:09:51.198929 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: w (0x77)[0m
+[[38;5;27m2023-04-04 17:09:51.198935 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: w (0x77)[0m
+[[38;5;27m2023-04-04 17:09:51.198940 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: w (0x77)[0m
+[[38;5;27m2023-04-04 17:09:51.198946 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:09:51.198951 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:09:51.198957 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:09:51.198963 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: 
+ (0x0a)[0m
+[[38;5;27m2023-04-04 17:09:51.198968 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:09:51.198974 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:09:51.198980 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: 
+ (0x0a)[0m
+[[38;5;27m2023-04-04 17:09:51.198985 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:09:51.198991 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:09:51.198997 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:09:51.199002 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:09:51.199008 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:09:51.199013 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:09:51.199019 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:09:51.199025 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: 
+ (0x0a)[0m
+[[38;5;27m2023-04-04 17:09:51.199030 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:09:51.199036 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:09:51.199042 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:09:51.199047 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:09:51.199053 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: 
+ (0x0a)[0m
+[[38;5;27m2023-04-04 17:09:51.199059 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: w (0x77)[0m
+[[38;5;27m2023-04-04 17:09:51.199064 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: w (0x77)[0m
+[[38;5;27m2023-04-04 17:09:51.199070 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: w (0x77)[0m
+[[38;5;27m2023-04-04 17:09:51.199075 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:09:51.199081 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:09:51.199087 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:09:51.199093 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:09:51.199098 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: 
+ (0x0a)[0m
+[[38;5;27m2023-04-04 17:09:51.199104 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:09:51.199110 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:09:51.199155 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: s (0x73)[0m
+[[38;5;27m2023-04-04 17:09:51.199169 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: 
+ (0x0a)[0m
+[[38;5;27m2023-04-04 17:09:51.199180 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:09:51.199191 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:09:51.199202 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:09:51.199214 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:09:51.199225 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:09:51.199235 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:09:51.199245 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:09:51.199255 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: w (0x77)[0m
+[[38;5;27m2023-04-04 17:09:51.199265 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: 
+ (0x0a)[0m
+[[38;5;27m2023-04-04 17:09:51.199276 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:09:51.199286 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:09:51.199295 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:09:51.199305 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:09:51.199315 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:09:51.199325 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:09:51.199334 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:09:51.199344 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:09:51.199359 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: 
+ (0x0a)[0m
+[[38;5;27m2023-04-04 17:09:51.199368 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: s (0x73)[0m
+[[38;5;27m2023-04-04 17:09:51.199378 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:09:51.199389 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:09:51.199399 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:09:51.199409 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:09:51.199418 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:09:51.199428 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: 
+ (0x0a)[0m
+[[38;5;27m2023-04-04 17:09:51.199438 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: s (0x73)[0m
+[[38;5;27m2023-04-04 17:09:51.199450 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: s (0x73)[0m
+[[38;5;27m2023-04-04 17:09:51.199460 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:09:51.199470 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:09:51.199481 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: 
+ (0x0a)[0m
+[[38;5;27m2023-04-04 17:09:51.199491 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: w (0x77)[0m
+[[38;5;27m2023-04-04 17:09:51.199500 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: w (0x77)[0m
+[[38;5;27m2023-04-04 17:09:51.199511 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: w (0x77)[0m
+[[38;5;27m2023-04-04 17:09:51.199521 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: w (0x77)[0m
+[[38;5;27m2023-04-04 17:09:51.199531 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:09:51.199541 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:09:51.199552 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:09:51.199562 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:09:51.199572 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:09:51.199582 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:09:51.199592 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:09:51.199602 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: 
+ (0x0a)[0m
+[[38;5;27m2023-04-04 17:09:51.199613 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: b (0x62)[0m
+[[38;5;27m2023-04-04 17:09:51.199623 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: s (0x73)[0m
+[[38;5;27m2023-04-04 17:09:51.199633 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: s (0x73)[0m
+[[38;5;27m2023-04-04 17:09:51.199643 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: 
+ (0x0a)[0m
+[[38;5;27m2023-04-04 17:09:51.199653 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:09:51.199663 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:09:51.199674 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:09:51.199683 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:09:51.199693 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: s (0x73)[0m
+[[38;5;27m2023-04-04 17:09:51.199703 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:09:51.199712 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: s (0x73)[0m
+[[38;5;27m2023-04-04 17:09:51.199722 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: 
+ (0x0a)[0m
+[[38;5;27m2023-04-04 17:09:51.199732 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:09:51.199742 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:09:51.199752 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:09:51.199762 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: a (0x61)[0m
+[[38;5;27m2023-04-04 17:09:51.199772 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: 
+ (0x0a)[0m
+[[38;5;27m2023-04-04 17:09:51.199782 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:09:51.199792 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:09:51.199802 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: w (0x77)[0m
+[[38;5;27m2023-04-04 17:09:51.199811 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: w (0x77)[0m
+[[38;5;27m2023-04-04 17:09:51.199821 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: 
+ (0x0a)[0m
+[[38;5;27m2023-04-04 17:09:51.199831 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:09:51.199840 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:09:51.199903 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:09:51.199927 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: d (0x64)[0m
+[[38;5;27m2023-04-04 17:09:51.199935 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: s (0x73)[0m
+[[38;5;27m2023-04-04 17:09:51.199946 -07:00[0m] [38;5;27mDEBUG[0m [src/instance/main.rs:68] [38;5;27m[fd: 5][0m [38;5;27mgot input: 
+ (0x0a)[0m
+[[38;5;208m2023-04-04 17:10:02.309932 -07:00[0m] [38;5;208mWARN[0m [src/instance/main.rs:72] [38;5;208m[fd: 5][0m [38;5;208mRecv thread died[0m
+[[38;5;208m2023-04-04 17:10:02.358765 -07:00[0m] [38;5;208mWARN[0m [src/instance/main.rs:93] [38;5;208m[fd: 5][0m [38;5;208mNES powered off[0m
+[2023-04-04 17:10:02.358845 -07:00] INFO [src/instance/main.rs:149] [fd: 5] Instance died.
+[2023-04-04 17:10:02.359229 -07:00] INFO [src/server/runners/process.rs:48] [fd: N/A] Instance 5 exited with status Ok(ExitStatus(unix_wait_status(0)))
+[[38;5;196m2023-04-04 17:10:02.359307 -07:00[0m] [38;5;196mERROR[0m [src/server/server.rs:90] [38;5;196m[fd: N/A][0m [38;5;196mClient disconnected: ClientId(127.0.0.1:56277) (0 connected)[0m

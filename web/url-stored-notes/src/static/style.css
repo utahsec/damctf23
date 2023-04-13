@@ -1,0 +1,16 @@
+/* oh my god I don't know how to use vanilla css */
+.note {
+    text-align: center;
+    border: 0.1rem solid;
+    box-shadow: 10px 5px 5px grey;
+    padding: 5px;
+    margin: 5px;
+}
+
+.text {
+    text-align: left;
+}
+
+.note:hover {
+    cursor: pointer;
+}

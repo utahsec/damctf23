@@ -1,0 +1,18 @@
+[workspace]
+members = [
+  "common", 
+  "mos6502", 
+  "nes", 
+  "nes-sdl", 
+  "nes-wasm", 
+  "nes-android",
+]
+
+exclude = [
+  "nes-embedded",
+  "nes-cloud",
+  "profile",
+]
+
+[profile.test]
+opt-level = 3 # Otherwise integration tests take too long

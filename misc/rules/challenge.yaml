@@ -1,0 +1,15 @@
+# chal metadata
+name: rules
+author: Admins
+description: |-
+  Welcome to DamCTF! Make sure to read the [rules](https://docs.google.com/document/d/1AAwHbfxzba0E5c8gdRje1wrugtstrSaG1aJySbWgR0Y/edit?usp=sharing)!
+
+# this should usually be the flag file so that it doesn't get out of sync if you change it
+flag:
+  file: ./flag
+
+# visible controls rCTF status, deployed controls k8s status. THESE SHOULD ALWAYS BE THE SAME
+visible: true
+deployed: true
+
+tiebreakEligible: false

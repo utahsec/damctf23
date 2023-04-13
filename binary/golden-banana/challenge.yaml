@@ -1,0 +1,39 @@
+# chal metadata
+name: golden-banana
+author: BobbySinclusto
+description: |-
+  The Quest for the Golden Banana is a text-based adventure game that combines humor, action, and mystery in an epic story that will keep you hooked until the end. Explore exotic locations, interact with colorful characters, and make choices that will shape your destiny. Do you have what it takes to complete The Quest for the Golden Banana?
+
+  The story for this challenge was entirely written by the Bing AI chatbot :-)
+
+  `nc {{ host }} {{ port }}`
+
+# these are files that are given to the player. if you need things from the container (i.e. compiled binary, libc),
+# push the challenge branch and download the artifacts from the CI/CD job
+# if no files are provided, delete this block
+provide:
+- ./golden-banana.tar.gz
+
+# this should usually be the flag file so that it doesn't get out of sync if you change it
+flag:
+  file: ./flag
+
+# visible controls rCTF status, deployed controls k8s status. THESE SHOULD ALWAYS BE THE SAME
+visible: true
+deployed: true
+
+# specify the containers to be built
+# replicas should be 2 unless resource intensive (>2) or stateful (1)
+# make sure to update the port for what you are exposing in the Dockerfile
+containers:
+  main:
+    build: .
+    replicas: 2
+    ports:
+    - 31337
+
+# make sure to only expose the target container (i.e. http but not mysql)
+expose:
+  main:
+  - target: 31337 # this is the container's EXPOSE port
+    tcp: 30234  # raw NodePort that is exposed publicly (use this for nc chals). must be unique and within 30000-32767

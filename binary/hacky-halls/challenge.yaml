@@ -1,0 +1,43 @@
+# chal metadata
+name: Hacky Halls
+author: BobbySinclusto # @AUTHOR: that's you!
+description: |-
+  Hurdle through the hazardous halls of this hypnotic 3D maze in hunt of the elusive "Exit!" sign. Hacky Halls is handcrafted by ChatGPT and Stable Diffusion! (btw if you find the exit sign let me know, I played the game several times while testing and still haven't been able to find it)
+
+  To play, unpack the tarball (`tar xvf client.tar`) and run the `HackyHalls.x86_64` binary. The server is live at `{{ host }}` on port `{{ port }}`. Please test your exploits locally - the server gets overwhelmed easily.
+
+  Links to client builds for other operating systems (client.tar.gz is the Linux client)
+  - [Windows client](https://storage.googleapis.com/rctf-bucket/hacky-halls-clients/windows_client.zip)
+  - [Mac client](https://storage.googleapis.com/rctf-bucket/hacky-halls-clients/mac_client.zip)
+
+# these are files that are given to the player. if you need things from the container (i.e. compiled binary, libc),
+# push the challenge branch and download the artifacts from the CI/CD job
+# if no files are provided, delete this block
+provide:
+- ./server.tar.gz
+- ./client.tar.gz
+
+# this should usually be the flag file so that it doesn't get out of sync if you change it
+flag:
+  file: ./flag
+
+# visible controls rCTF status, deployed controls k8s status. THESE SHOULD ALWAYS BE THE SAME
+visible: true
+deployed: true
+
+# specify the containers to be built
+# replicas should be 2 unless resource intensive (>2) or stateful (1)
+# make sure to update the port for what you are exposing in the Dockerfile
+containers:
+  main:
+    build: .
+    replicas: 2
+    ports:
+    - 31337
+
+# make sure to only expose the target container (i.e. http but not mysql)
+expose:
+  main:
+  - target: 31337 # this is the container's EXPOSE port
+    # @AUTHOR PICK ONE OF THE BELOW, NOT BOTH
+    tcp: 30193  # raw NodePort that is exposed publicly (use this for nc chals). must be unique and within 30000-32767

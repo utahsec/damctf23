@@ -1,0 +1,47 @@
+United States,Washington D.C.
+Canada,Ottawa
+Mexico,Mexico City
+Brazil,Brasília
+Argentina,Buenos Aires
+Peru,Lima
+Chile,Santiago
+Australia,Canberra
+New Zealand,Wellington
+China,Beijing
+Japan,Tokyo
+South Korea,Seoul
+India,New Delhi
+Pakistan,Islamabad
+Russia,Moscow
+France,Paris
+Germany,Berlin
+Italy,Rome
+Spain,Madrid
+United Kingdom,London
+Ireland,Dublin
+Norway,Oslo
+Sweden,Stockholm
+Finland,Helsinki
+Denmark,Copenhagen
+Netherlands,Amsterdam
+Belgium,Brussels
+Switzerland,Bern
+Austria,Vienna
+Greece,Athens
+Turkey,Ankara
+Israel,Jerusalem
+Egypt,Cairo
+South Africa,Pretoria
+Nigeria,Abuja
+Morocco,Rabat
+Kenya,Nairobi
+Tanzania,Dodoma
+Ethiopia,Addis Ababa
+Saudi Arabia,Riyadh
+Iran,Tehran
+Iraq,Baghdad
+Jordan,Amman
+Lebanon,Beirut
+Syria,Damascus
+Afghanistan,Kabul
+

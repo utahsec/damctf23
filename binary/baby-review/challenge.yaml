@@ -1,0 +1,39 @@
+# chal metadata
+name: baby-review
+author: Laozi # @AUTHOR: that's you!
+description: |-
+  I've created a fun program for you to review your favorite movies and books. Can you figure out the problem with it?
+
+  `nc {{ host }} {{ port }}`
+
+# these are files that are given to the player. if you need things from the container (i.e. compiled binary, libc),
+# push the challenge branch and download the artifacts from the CI/CD job
+# if no files are provided, delete this block
+provide:
+- ./baby-review
+- ./libc.so.6
+
+# this should usually be the flag file so that it doesn't get out of sync if you change it
+flag:
+  file: ./flag
+
+# visible controls rCTF status, deployed controls k8s status. THESE SHOULD ALWAYS BE THE SAME
+visible: true
+deployed: true
+
+# specify the containers to be built
+# replicas should be 2 unless resource intensive (>2) or stateful (1)
+# make sure to update the port for what you are exposing in the Dockerfile
+containers:
+  main:
+    build: .
+    replicas: 2
+    ports:
+    - 31337
+
+# make sure to only expose the target container (i.e. http but not mysql)
+expose:
+  main:
+  - target: 31337 # this is the container's EXPOSE port
+    # AUTHOR PICK ONE OF THE BELOW, NOT BOTH
+    tcp: 30888  # raw NodePort that is exposed publicly (use this for nc chals). must be unique and within 30000-32767

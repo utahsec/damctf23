@@ -1,0 +1,47 @@
+# chal metadata
+name: forget-me-not
+author: BobbySinclusto and Perchik
+description: |-
+  You are a member of a cybercrime group that has recently received a tip-off about a certain CryptoGeniusL1, who reportedly has a significant amount of cryptocurrency stored in their DeFiZone account. Your group has decided to target this individual and break into their account to steal the crypto. Use your sleuthing skills to find a way to bypass the security measures put in place.
+
+  - [https://defizone.win/](https://defizone.win/)
+  - [http://206.189.196.33](http://206.189.196.33)
+
+# this should usually be the flag file so that it doesn't get out of sync if you change it
+flag:
+  file: ./web/flag
+
+# visible controls rCTF status, deployed controls k8s status. THESE SHOULD ALWAYS BE THE SAME
+visible: true
+deployed: false
+
+# specify the containers to be built
+# replicas should be 2 unless resource intensive (>2) or stateful (1)
+# make sure to update the port for what you are exposing in the Dockerfile
+containers:
+  web:
+    build: ./web
+    replicas: 2
+    ports:
+    - 5000
+    resources:
+      limits:
+        cpu: 200m
+  web2:
+    build: ./web2
+    replicas: 2
+    ports:
+    - 5050
+    resources:
+      limits:
+        cpu: 200m
+
+# make sure to only expose the target container (i.e. http but not mysql)
+# target is the container expose port ^^
+expose:
+  web:
+  - target: 5000
+    http: forget-me-not
+  web2:
+  - target: 5050
+    http: forget-me-not

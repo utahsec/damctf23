@@ -1,0 +1,11 @@
+[package]
+name = "nes-sdl"
+version = "0.1.0"
+edition = "2021"
+default-run = "nes-sdl"
+
+[dependencies]
+structopt = "0.3.13"
+sdl2 = "0.35.2"
+common = { path = "../common" }
+nes = { path = "../nes", features = ["debugger"] }

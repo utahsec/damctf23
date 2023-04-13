@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>No Data-Store Notes</title>
+<link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
+<link rel="stylesheet" href="style.css" />
+<script defer src="https://pyscript.net/latest/pyscript.js"></script>
+</head>
+<body id="content">
+<button id="edit" onclick="document.location = window.location.origin+'/edit'+window.location.hash">Edit Notes</button>
+<script id="js">
+
+function createNoteElement(prompt, answer, tag){
+    // secure, as always
+    if (tag.toLowerCase() === 'script'){
+        tag = 'p'
+    }
+
+    const noteElement = document.createElement("div");
+    noteElement.classList.add("note");
+    const textElement = document.createElement("div");
+    textElement.classList.add("text");
+    const promptElement = document.createElement(tag);
+    const answerElement = document.createElement(tag);
+    answerElement.style.display = "none";
+    textElement.addEventListener("click", () => {
+        if (promptElement.style.display === "none"){
+            promptElement.style.display = "";
+            answerElement.style.display = "none";
+        } else {
+            promptElement.style.display = "none";
+            answerElement.style.display = "";
+        }
+    });
+
+    noteElement.appendChild(textElement);
+    textElement.appendChild(promptElement);
+    textElement.appendChild(answerElement);
+
+    promptElement.textContent = prompt;
+    answerElement.textContent = answer;
+
+    document.getElementById("notes").appendChild(noteElement);
+    
+    return;
+}
+
+// Auto-reload content
+window.onload = () => {
+    const python_code = document.getElementById('python').innerHTML;
+    window.onhashchange =  () => {
+        // probably not the right way to do this but I don't care 😎
+        pyscript.runtime.run(python_code.replace('&gt;', ">"))
+    }
+}
+</script>
+<div id="notes"></div>
+<py-config>
+packages = ["lzma"]
+</py-config>
+<py-script id="python">
+import js
+from base64 import b64encode, b64decode
+from lzma import compress, decompress
+import json
+from pyscript import Element
+
+
+encodedNotes = js.window.location.hash[1:]
+notes = {}
+try:
+    encoded_notes = encodedNotes.encode()
+    decoded_notes = decompress(b64decode(encoded_notes))
+    notes = json.loads(decoded_notes.decode('utf-8'))
+except:
+    notes = {}
+
+# Dynamically load content
+js.document.getElementById('notes').innerHTML=''
+for note in notes:
+    if 'prompt' in note and 'answer' in note and "tag" in note:
+        js.createNoteElement(note['prompt'], note['answer'], note['tag'])
+
+</py-script>
+</body>
+</html>

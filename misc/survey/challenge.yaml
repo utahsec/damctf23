@@ -1,0 +1,15 @@
+# chal metadata
+name: survey
+author: Admins 
+description: |-
+  Thanks for playing DamCTF, get a flag by giving us [feedback](https://forms.gle/oMckVDGAWLamGEe38)!
+
+# this should usually be the flag file so that it doesn't get out of sync if you change it
+flag:
+  file: ./flag
+
+value: 1
+
+# visible controls rCTF status, deployed controls k8s status. THESE SHOULD ALWAYS BE THE SAME
+visible: true
+deployed: true

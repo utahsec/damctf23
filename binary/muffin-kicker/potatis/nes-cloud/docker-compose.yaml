@@ -1,0 +1,10 @@
+version: "3.9"
+services:
+  potatis:
+    build:
+      context: ..
+      dockerfile: nes-cloud/Dockerfile
+    ports:
+      - "4444:4444"
+      - "5555:5555"
+  restart: unless-stopped

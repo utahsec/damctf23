@@ -1,0 +1,31 @@
+name: incharcerated
+author: WholeWheatBagels
+description: |-
+  The warden of this jail has assured me that dunders won't help you here.
+
+  `nc {{ host }} {{ port }}`
+
+provide:
+  - jail.rb
+
+flag:
+  file: ./flag
+
+# visible controls rCTF status, deployed controls k8s status. THESE SHOULD ALWAYS BE THE SAME
+visible: true
+deployed: true
+
+# specify the containers to be built
+# replicas should be 2 unless resource intensive (>2) or stateful (1)
+# make sure to update the port for what you are exposing in the Dockerfile
+containers:
+  main:
+    build: .
+    replicas: 2
+    ports:
+    - 31337
+
+expose:
+  main:
+  - target: 31337
+    tcp: 31313
